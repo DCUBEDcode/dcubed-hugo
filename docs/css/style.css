@@ -446,7 +446,7 @@ h3,
   position: absolute;
   width: 70px;
   height: 64px;
-  background-image: url('./cube.svg');
+  background-image: url('../cube.svg');
   background-size: 100%;
   top: 0;
   left: 0;
