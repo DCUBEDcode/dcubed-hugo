@@ -21,11 +21,67 @@
     </item>
     
     <item>
-      <title></title>
-      <link>http://dcubed.com.au/blog/first-blog-post/</link>
+      <title>Product Strategy and User Experience</title>
+      <link>http://dcubed.com.au/services/strategy-and-ux/</link>
+      <pubDate>Thu, 23 Apr 2020 16:30:14 +1000</pubDate>
+      
+      <guid>http://dcubed.com.au/services/strategy-and-ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Create smoother animations with animation-fill-mode</title>
+      <link>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dcubed.com.au/blog/first-blog-post/</guid>
+      <guid>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</guid>
+      <description>CSS Animations breath life into any design. Working alongside their good friend transitions, they are the bread and butter of a modern user experience, helping guide users through a design.
+One property often overlooked that supercharges your animations, allowing you to take control of default states and overall timings is animation-fill-mode. This property gets really interesting when used with the value forwards.
+1 2 3 4  .card { animation: fadeIn 375ms ease; animation-fill-mode: forwards; }   </description>
+    </item>
+    
+    <item>
+      <title>Creating fool proof prototypes with production data</title>
+      <link>http://dcubed.com.au/blog/prototyping-with-real-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/prototyping-with-real-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finance X</title>
+      <link>http://dcubed.com.au/blog/finx-case-study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/finx-case-study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grow2</title>
+      <link>http://dcubed.com.au/blog/grow2-case-study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/grow2-case-study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simple way to A/B test in your prototypes</title>
+      <link>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>When to use animate or transition in CSS</title>
+      <link>http://dcubed.com.au/blog/when-to-animate-vs-transition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/when-to-animate-vs-transition/</guid>
       <description></description>
     </item>
     

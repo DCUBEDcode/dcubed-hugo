@@ -61,6 +61,14 @@ ul {
   max-width: 640px;
 }
 
+.highlight {
+  margin-bottom: 2rem;
+}
+
+.highlight > div {
+  padding: 1rem;
+}
+
 .header {
   display: flex;
   padding: 1rem;
@@ -300,14 +308,15 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Raleway';
   line-height: 1.25;
+  font-family: 'Roboto';
   font-weight: 900;
   color: #060d1b;
 }
 
 h1 {
   font-size: 2rem;
+  font-family: 'Raleway';
 }
 
 h2,
@@ -957,7 +966,7 @@ h3,
   display: block;
   content: "";
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 42.8571%;
   background-size: cover;
 }
 
@@ -970,8 +979,6 @@ h3,
 }
 
 .post-wrap {
-  opacity: 0;
-  animation: fadeIn 500ms 1500ms ease forwards;
   min-height: 100vh;
 }
 
@@ -1019,7 +1026,7 @@ h3,
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   h2,
@@ -1091,7 +1098,7 @@ h3,
 
   .header--slim {
     min-height: 0;
-    height: 6rem;
+    height: 6.75rem;
   }
 
   .header--slim .header__logo {
@@ -1105,14 +1112,14 @@ h3,
   }
 
   .header--slim + .header__nav {
-    top: 0.5rem;
+    opacity: 1;
+    animation: none;
   }
 
   .header--slim .dcubed-border,
   .header--slim .dcubed-title {
     display: none;
   }
-
 
   .casestudy {
     display: grid;
@@ -1164,9 +1171,11 @@ h3,
 
   .posts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
   }
+
+  .posts :nth-child(4) { display: none }
 
   .header__wrap {
     transform: translateY(154px);
@@ -1189,4 +1198,35 @@ h3,
     padding: 4rem 1rem;
   }
 
+
+  .visited .header__wrap {
+    transform: translateY(-28px);
+    animation: none;
+  }
+
+}
+
+@media(min-width: 1200px) {
+
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .posts :nth-child(4) { display: initial }
+
+}
+
+.visited .dcubed__cube,
+.visited .dcubed-border,
+.visited .dcubed-title,
+.visited .intro,
+.visited .header__nav,
+.visited .header__footer,
+.visited .main {
+  opacity: 1;
+  animation: none;
+}
+
+.visited .header__footer {
+  transform: translateY(0);
 }

@@ -18,7 +18,12 @@
   </url>
   
   <url>
-    <loc>http://dcubed.com.au/blog/first-blog-post/</loc>
+    <loc>http://dcubed.com.au/services/strategy-and-ux/</loc>
+    <lastmod>2020-04-23T16:30:14+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/about/</loc>
   </url>
   
   <url>
@@ -26,11 +31,43 @@
   </url>
   
   <url>
+    <loc>http://dcubed.com.au/categories/casestudy/</loc>
+  </url>
+  
+  <url>
     <loc>http://dcubed.com.au/categories/</loc>
   </url>
   
   <url>
+    <loc>http://dcubed.com.au/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/prototyping-with-real-data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/finx-case-study/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/grow2-case-study/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</loc>
+  </url>
+  
+  <url>
     <loc>http://dcubed.com.au/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/blog/when-to-animate-vs-transition/</loc>
   </url>
   
 </urlset>

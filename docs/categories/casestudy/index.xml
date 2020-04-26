@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>casestudy on Best App Developers in Brisbane | DCUBED - Dream Design Develop</title>
+    <link>http://dcubed.com.au/categories/casestudy/</link>
+    <description>Recent content in casestudy on Best App Developers in Brisbane | DCUBED - Dream Design Develop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://dcubed.com.au/categories/casestudy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finance X</title>
+      <link>http://dcubed.com.au/blog/finx-case-study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/finx-case-study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grow2</title>
+      <link>http://dcubed.com.au/blog/grow2-case-study/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/grow2-case-study/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
