@@ -79,21 +79,21 @@
   <section class="recent-posts">
     <h1 class="section-title double">Recent posts</h1>
     <div class="posts">
-			{{ range first 4 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-        <a class="post" href="{{ .Permalink }}">
-          {{ if .Params.heroSmallUrl }}
-            <div class="post__header" style="background-image: url({{ .Params.heroSmallUrl }})">
+      {{ range first 4 (where (where .Site.RegularPages "Type" "blog") "Type" "!=" "casestudy") }}
+          <a class="post" href="{{ .Permalink }}">
+            {{ if .Params.heroSmallUrl }}
+              <div class="post__header" style="background-image: url({{ .Params.heroSmallUrl }})">
+              </div>
+            {{ end }}
+            {{ if not .Params.heroSmallUrl }}
+              <div class="post__header" style="background-image: url(post-1.jpeg)">
+              </div>
+            {{ end }}
+            <div class="post__body">
+              <h4>{{ .Title }}</h4>
+              <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
             </div>
-          {{ end }}
-          {{ if not .Params.heroSmallUrl }}
-            <div class="post__header" style="background-image: url(post-1.jpeg)">
-            </div>
-          {{ end }}
-          <div class="post__body">
-            <h4>{{ .Title }}</h4>
-            <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-          </div>
-        </a>
+          </a>
       {{ end }}
     </div>
   </section>

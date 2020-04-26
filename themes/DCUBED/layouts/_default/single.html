@@ -7,7 +7,7 @@
     <h1 id="title">{{ .Title }}</h1>
     {{ if .Params.heroLargeUrl }}
       <div class="double">
-        <img src="{{ .Params.heroLargeUrl }}" alt="" />
+        <img src="/{{ .Params.heroLargeUrl }}" alt="" />
       </div>
     {{ end }}
     <article id="content">
