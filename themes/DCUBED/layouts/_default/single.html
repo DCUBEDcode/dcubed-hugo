@@ -4,13 +4,16 @@
 {{ define "main" }}
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title">{{ .Title }}</h1>
+    <h1 id="title" class="double">{{ .Title }}</h1>
     {{ if .Params.heroLargeUrl }}
       <div class="double">
-        <img src="/{{ .Params.heroLargeUrl }}" alt="" />
+        <img src="{{ .Params.heroLargeUrl }}" alt="" />
       </div>
     {{ end }}
     <article id="content">
+      {{ if .Params.intro }}
+        <p class="h3 double">{{ .Params.intro }}</p>
+      {{ end }}
       {{ .Content }}
     </article>
     <aside id="meta">

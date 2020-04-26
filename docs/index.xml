@@ -35,8 +35,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</guid>
-      <description>CSS Animations breath life into any design. Working alongside their good friend transitions, they are the bread and butter of a modern user experience, helping guide users through a design.
-One property often overlooked that supercharges your animations, allowing you to take control of default states and overall timings is animation-fill-mode. This property gets really interesting when used with the value forwards.
+      <description>One property often overlooked that supercharges your animations, allowing you to take control of default states and overall timings is animation-fill-mode. This property gets really interesting when used with the value forwards.
 1 2 3 4  .card { animation: fadeIn 375ms ease; animation-fill-mode: forwards; }   </description>
     </item>
     
