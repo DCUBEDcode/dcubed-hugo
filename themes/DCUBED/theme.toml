@@ -7,6 +7,7 @@ licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = ""
 homepage = "http://dcubed.com.au/"
 tags = []
+categories = ["casestudy"]
 features = []
 min_version = "0.41.0"
 

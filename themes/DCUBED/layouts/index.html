@@ -1,63 +1,10 @@
 {{ define "main" }}
-  <div class="wrap">
-    <nav class="header__nav" id="header-nav">
-      <a class="header__nav-icon header__nav-icon--open toggle-nav">
-        <i class="fas fa-bars"></i>
-      </a>
-      <a class="header__nav-icon header__nav-icon--close toggle-nav">
-        <i class="fas fa-times"></i>
-      </a>
-      <a href="/services/product" class="header__nav-link">Product & Strategy</a>
-      <a href="/services/development" class="header__nav-link">Development</a>
-      <a href="/about" class="header__nav-link">About</a>
-      <a href="/blog" class="header__nav-link mobile-double">Blog</a>
-      <a href="#contact" class="btn btn--secondary btn--light close-nav">Get in touch</a>
-    </nav>
-    <div class="header" id="header">
-      <div class="header__wrap">
-        <div class="header__logo">
-          <div class="dcubed-wrap">
-            <div class="dcubed">
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-              <div class="dcubed__cube"></div>
-            </div>
-            <div class="dcubed-border"></div>
-            <h1 class="dcubed-title">
-              <span>D</span>
-              <span>C</span>
-              <span>U</span>
-              <span>B</span>
-              <span>E</span>
-              <span>D</span>
-            </h1>
-          </div>
-        </div>
-        <div class="intro">
-          <h1 class="intro__title huge light-title">Great products, <br class="mobile-only" /> no silly business.</h1>
-          <h2 class="intro__subtitle light-title">Our talented team helps
-            your business innovate faster than ever</h2>
-          <a href="#contact" id="cta" class="btn btn--large">Request a call</a>
-        </div>
-      </div>
-      <div class="header__footer">
-        <div class="header__more" id="header-more">
-          See what we've done
-          <i class="fas fa-arrow-down header__arrow"></i>
-        </div>
-      </div>
-    </div>
-    <div class="main">
-      <div class="container">
-        <section class="section">
-          <h1 class="section-title double">What we've worked on</h1>
+  <div class="main">
+    <div class="container">
+      <section class="section">
+        <h1 class="section-title double">What we've worked on</h1>
+        {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
+			  {{ range ($casestudy.Pages) }}
           <div class="casestudy">
             <div class="casestudy__image casestudy__image--grow">
               <div class="grow2" id="grow2">
@@ -72,208 +19,82 @@
               </div>
             </div>
             <div class="casestudy__copy">
-              <h2>Grow 2: Create a better learning environment for sporting clubs</h2>
-              <p class="casestudy__blurb">Grow2 is an organisation that is hell
-              bent on getting effective training out people in what ever which
-              way they prefer to learn. This meant that we needed to cater for
-              high quality audio and video as well as content with supporting
-              images topped off with a quiz.</p>
+              <h2>{{ .Title }}</h2>
+              <p>{{ .Description }}</p>
               <h3>What we did</h3>
               <ul class="double">
-                <li>UI/UX design</li>
-                <li>Mobile Web App</li>
-                <li>Product stategy</li>
-                <li>Deployment &amp; hosting</li>
+                {{ range .Params.services }}
+                <li>{{ . }}</li>
+                {{ end }}
               </ul>
-              <a href="#" class="btn btn--secondary casestudy__btn">See Case Study</a>
-              <a href="https://www.grow2.com.au" class="btn btn--secondary">Visit Site</a>
+              <a href="{{ .Permalink }}" class="btn btn--secondary casestudy__btn">See Case Study</a>
             </div>
           </div>
-          <div class="casestudy">
-            <div class="casestudy__image casestudy__image--fiex" id="finx">
-              <div class="finx">
-                <span class="finx-logo hero__finx-logo" id="finx-logo">
-                  <div class="finx-logo__top">
-                    <span>Fin</span><i>.</i><span class="finx-logo__x">X</span>
-                  </div>
-                  <div class="finx-logo__border"></div>
-                  <div class="finx-logo__sub">Finance X</div>
-                </span>
-                <div class="finx__bg"></div>
-              </div>
-            </div>
-            <div class="casestudy__copy">
-              <h2>Finance X: Capture finance enquiries in less than a minute, all done
-                in a weekend</h2>
-              <p class="casestudy__blurb">Finance X is a new finance company based in Brisbane had all
-              their merch labelled with their domain but no website! This popup
-              site was created in a weekend to help them start taking traffic
-              and capturing finance enquiries.</p>
-              <h3>What we did</h3>
-              <ul class="double">
-                <li>UI/UX Design</li>
-                <li>App development</li>
-                <li>Email integration</li>
-                <li>Hosting and deployment</li>
-              </ul>
-              <h3>What they said</h3>
-              <div class="casestudy__review">
-                <p><em>"Not only were DCUBED prompt but he also explained
-                  things in “layman’s terms” and made everything easy which
-                  I loved!"</em></p>
-                <p class="casestudy__author">- Jorge from Finance X</p>
-              </div>
-              <a href="#" class="btn btn--secondary casestudy__btn" style="margin-right: 0.5rem;">See Case Study</a>
-              <a href="#" class="btn btn--secondary">Visit Site</a>
-            </div>
+        {{ end }}
+      </section>
+      <section class="section" id="what-we-do">
+        <h1 class="section-title double">How we work</h1>
+        <div class="how-we-work">
+          <div class="how-we-work__img" id="proto-image">
+            <img src="user.svg" alt="">
           </div>
-        </section>
-        <section class="section" id="what-we-do">
-          <h1 class="section-title double">How we work</h1>
-          <div class="how-we-work">
-            <div class="how-we-work__img" id="proto-image">
-              <img src="user.svg" alt="">
-            </div>
-            <div>
-              <h2>We use rapid prototyping</h2>
-              <p>What you won’t find us doing is spending weeks perfecting high quality design mocks. Making such serious investment and commitment to a design so early on is a flawed way to work.</p>
-              <p>Instead, expect from us enough visual documentation to help convey an idea. Once we all feel like it’s the right choice. We start bringing the idea to life with code.</p>
-            </div>
+          <div>
+            <h2>We use rapid prototyping</h2>
+            <p>What you won’t find us doing is spending weeks perfecting high quality design mocks. Making such serious investment and commitment to a design so early on is a flawed way to work.</p>
+            <p>Instead, expect from us enough visual documentation to help convey an idea. Once we all feel like it’s the right choice. We start bringing the idea to life with code.</p>
           </div>
-          <div class="how-we-work how-we-work--grow">
-            <div class="how-we-work__img" id="heroku-image">
-              <img src="heroku.svg" alt="" style="width: 170px">
-            </div>
-            <div>
-              <h2>We ship fast, and ship often.</h2>
-              <p>Using platforms like Heroku, we are able to create and host any kind of app in seconds.</p><p>Not only does this automated deployment process save time (money), it means you get a publically accessible link to your application upon kick off. You can now test and share with your own team, whenever we push a release.</p>
-            </div>
+        </div>
+        <div class="how-we-work how-we-work--grow">
+          <div class="how-we-work__img" id="heroku-image">
+            <img src="heroku.svg" alt="" style="width: 170px">
           </div>
-          <div class="how-we-work how-we-work--communicate">
-            <div class="how-we-work__img" id="trello-image">
-              <img src="tools.png" alt="">
-            </div>
-            <div>
-              <h2>Get amongst it (or don't)</h2>
-              <p>We create an environment of transparency and sharing so that you can see as much or as little as you want about the progress of your application.</p>
-              <p>Upon kick-off you will receive an invite to your projects channel in the communication app Slack. In here you will see all ‘commits’ made to the code repository, the moderation of the Trello project board and any commentary made by the development team.</p>
-            </div>
+          <div>
+            <h2>We ship fast, and ship often.</h2>
+            <p>Using platforms like Heroku, we are able to create and host any kind of app in seconds.</p><p>Not only does this automated deployment process save time (money), it means you get a publically accessible link to your application upon kick off. You can now test and share with your own team, whenever we push a release.</p>
           </div>
-          <div class="how-we-work how-we-work--grow" id="insight-image">
-            <div class="how-we-work__img">
-              <img src="lab.svg" alt="" style="width: 240px">
-            </div>
-            <div>
-              <h2>Give insight for future opportunity</h2>
-              <p>During project kick offs, we help determine the goals of your product. It's very important that once users start using your software, you are able to understand exactly how they are using it.</p>
-              <p>With our measurements in place, the learnings can shape any future decisions you make. You will continue to get engagement reports as long as you choose. </p>
-            </div>
+        </div>
+        <div class="how-we-work how-we-work--communicate">
+          <div class="how-we-work__img" id="trello-image">
+            <img src="tools.png" alt="">
           </div>
-        </section>
-      </div>
+          <div>
+            <h2>Get amongst it (or don't)</h2>
+            <p>We create an environment of transparency and sharing so that you can see as much or as little as you want about the progress of your application.</p>
+            <p>Upon kick-off you will receive an invite to your projects channel in the communication app Slack. In here you will see all ‘commits’ made to the code repository, the moderation of the Trello project board and any commentary made by the development team.</p>
+          </div>
+        </div>
+        <div class="how-we-work how-we-work--grow" id="insight-image">
+          <div class="how-we-work__img">
+            <img src="lab.svg" alt="" style="width: 240px">
+          </div>
+          <div>
+            <h2>Give insight for future opportunity</h2>
+            <p>During project kick offs, we help determine the goals of your product. It's very important that once users start using your software, you are able to understand exactly how they are using it.</p>
+            <p>With our measurements in place, the learnings can shape any future decisions you make. You will continue to get engagement reports as long as you choose. </p>
+          </div>
+        </div>
+      </section>
     </div>
-    <section class="recent-posts">
-      <h1 class="section-title double">Recent posts</h1>
-      <div class="posts">
-        <a href="#" class="post">
-          <div class="post__header" style="background-image: url(post-1.jpeg)">
-          </div>
-          <div class="post__body">
-            <h3 class="post__title pressed">
-              United Nations: Increasing food donations with design sprints
-            </h3>
-            <p>14 April 2020</p>
-          </div>
-        </a>
-        <a href="#" class="post">
-          <div class="post__header" style="background-image: url(post-2.png)">
-          </div>
-          <div class="post__body">
-            <h3 class="post__title pressed">
-              Updating the Design Sprint Process
-            </h3>
-            <p>2 April 2020</p>
-          </div>
-        </a>
-        <a href="#" class="post">
-          <div class="post__header" style="background-image: url(post-3.jpeg)">
-          </div>
-          <div class="post__body">
-            <h3 class="post__title pressed">
-              User Research is overrated
-            </h3>
-            <p>20 March 2020</p>
-          </div>
-        </a>
-        <a href="#" class="post">
-          <div class="post__header" style="background-image: url(post-4.jpeg)">
-          </div>
-          <div class="post__body">
-            <h3 class="post__title pressed">
-              How to avoid "project fatigue" when building projects
-            </h3>
-            <p>11 February 2020</p>
-          </div>
-        </a>
-      </div>
-    </section>
-    <footer class="footer" id="contact">
-      <div class="container container--small">
-        <h1 class="section-title light-title">Get in touch!</h1>
-        <p class="double">Whether you need to create a new product from scratch, drastically improve a product or give your team an innovative kick, DCUBED has you covered. To know more, request a consultation through this form:</p>
-        <form method="POST" action="https://formspree.io/mbjankzq" class="form" id="form">
-          <div class="form__content">
-            <div class="form__group">
-              <input type="text" id="first-name" name="firstName" placeholder="First name*" class="form__input"
-                                                                                            required>
-            </div>
-            <div class="form__group">
-              <input type="email" name="email" placeholder="Email address" class="form__input"
-                                                                          required>
-            </div>
-            <div class="form__group desktop-only">
-              <input type="text" name="company" placeholder="Company name" class="form__input">
-            </div>
-            <div class="form__group desktop-only">
-              <input type="text" name="title" placeholder="What is the title in your company?" class="form__input">
-            </div>
-            <div class="form__group mobile-double">
-              <input type="tel" name="phone" placeholder="Phone number*"  class="form__input"
-                                                                          required>
-            </div>
-            <div class="form__group double desktop-only">
-              <input type="text" name="refer" placeholder="How did you hear about us?" class="form__input">
-            </div>
-            <h3>How can DCUBED help?</h3>
-            <div class="form__group double">
-              <label for="ux" class="form__checkbox">
-                <input type="checkbox" id="ux" name="serviceUx">
-                <span>I'm looking for top notch UI/UX design for an idea.</span>
-              </label>
-              <label for="dev" class="form__checkbox">
-                <input type="checkbox" id="dev" name="serviceDev">
-                <span>I need classy engineers to build something I have already designed.</span>
-              </label>
-              <label for="all" class="form__checkbox">
-                <input type="checkbox" id="all" name="serviceAll">
-                <span>I would like an entire product built from the ground up.</span>
-              </label>
-            </div>
-            <button class="btn btn--large btn--block" id="form-submit">Submit Form</button>
-          </div>
-          <div class="form__success">
-            <h2>Thanks for your enquiry</h2>
-            <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
-            <p>- Jason from DCUBED</p>
-          </div>
-          <div class="form__error">
-            <h2>Something wen't wrong</h2>
-            <p>Not sure what happened here. You can try again or feel free to
-            email us below.</p>
-            <p>- Jason from DCUBED</p>
-          </div>
-        </form>
-      </div>
-    </footer>
   </div>
+  <section class="recent-posts">
+    <h1 class="section-title double">Recent posts</h1>
+    <div class="posts">
+			{{ range first 4 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        <a class="post" href="{{ .Permalink }}">
+          {{ if .Params.heroSmallUrl }}
+            <div class="post__header" style="background-image: url({{ .Params.heroSmallUrl }})">
+            </div>
+          {{ end }}
+          {{ if not .Params.heroSmallUrl }}
+            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            </div>
+          {{ end }}
+          <div class="post__body">
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
 {{ end }}

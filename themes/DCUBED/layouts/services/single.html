@@ -5,24 +5,15 @@
 <div class="post-wrap">
   <div class="container">
     <h1 id="title">{{ .Title }}</h1>
-    {{ if .Params.heroLargeUrl }}
-      <div class="double">
-        <img src="{{ .Params.heroLargeUrl }}" alt="" />
-      </div>
-    {{ end }}
     <article id="content">
       {{ .Content }}
     </article>
     <aside id="meta">
       <div>
-        <section class="post-meta">
-          <p id="date">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
-          <p id="wordcount"> {{ .WordCount }} Words </p>
-        </section>
         {{ with .Params.topics }}
         <ul id="topics">
           {{ range . }}
-            <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+          <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
           {{ end }}
         </ul>
         {{ end }}

@@ -2,13 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Best App Developers in Brisbane | DCUBED - Dream Design Develop</title>
-    <link>http://dcubed.com.au/posts/</link>
+    <link>http://dcubed.com.au/blog/</link>
     <description>Recent content on Best App Developers in Brisbane | DCUBED - Dream Design Develop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dcubed.com.au/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dcubed.com.au/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://dcubed.com.au/blog/first-blog-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/first-blog-post/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
