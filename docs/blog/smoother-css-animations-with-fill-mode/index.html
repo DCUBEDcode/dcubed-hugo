@@ -67,10 +67,8 @@
       
       <h2 id="what-is-animation-fill-mode">What is animation-fill-mode?</h2>
 <p><code>animation-fill-mode</code> is a CSS property tells an animation how to apply styles to the target element before and after it is run.</p>
-<p>When used with <code>animation-fill-mode: forwards</code> this would mean that the target element would maintain the styles applied at the end of the animation:</p>
-<p>For example, if you apply this animation to an two elements on a page, as follows, and one
-of them has a delay on the animation. You will see the second looks wrong
-because it goes from visible to hidden to visible.</p>
+<p>When the value is set to <code>animation-fill-mode: forwards</code>, this means that the target element will maintain the styles applied at the end of the animation.</p>
+<p>For example, if you apply the following animation to two elements on a page and one of them has a delay on the animation, you will see the second looks wrong because it goes from visible to hidden to visible.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -131,13 +129,48 @@ because it goes from visible to hidden to visible.</p>
   }</code></pre></td></tr></table>
 </div>
 </div>
+<p>To prevent this we want to make sure the second element appears hidden to begin
+with.  We can do this by setting <code>opacity: 0</code> for the boxes. This will solve
+our problems at the start, but once the animation runs the boxes would return to
+hidden.</p>
+<p>To keep things how we want them, we can add <code>animation-fill-mode: forwards</code> or shorthand <code>animation: fadeIn 375ms ease forwards</code>.</p>
+<h3 id="css-with-fill-mode-set">CSS with fill-mode set</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  .box {
+    width: <span style="color:#bd93f9">100</span>px;
+    height: <span style="color:#bd93f9">100</span>px;
+    background: DarkGoldenRod;
+    animation: fadeIn <span style="color:#bd93f9">375</span>ms ease;
+    animation<span style="color:#ff79c6">-</span>fill<span style="color:#ff79c6">-</span>mode: forwards;
+  }
+
+  .box<span style="color:#ff79c6">--</span><span style="color:#bd93f9">2</span> {
+    animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">375</span>ms;
+  }</code></pre></td></tr></table>
+</div>
+</div>
+<p>Now the boxes will be hidden to start off with and stay visible once the animation is complete.</p>
 
     </article>
     <aside id="meta">
       <div>
         <section class="post-meta">
           <p id="date">Published Mon Jan 1, 0001 </p>
-          <p id="wordcount"> 152 Words </p>
+          <p id="wordcount"> 270 Words </p>
         </section>
         
         

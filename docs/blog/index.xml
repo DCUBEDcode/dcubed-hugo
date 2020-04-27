@@ -12,12 +12,13 @@
     
     <item>
       <title>Create smoother animations with animation-fill-mode</title>
-      <link>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</link>
+      <link>http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dcubed.com.au/blog/smoother-animations-with-fill-mode/</guid>
-      <description>One property often overlooked that supercharges your animations, allowing you to take control of default states and overall timings is animation-fill-mode. This property gets really interesting when used with the value forwards.
-1 2 3 4  .card { animation: fadeIn 375ms ease; animation-fill-mode: forwards; }   </description>
+      <guid>http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/</guid>
+      <description>What is animation-fill-mode? animation-fill-mode is a CSS property tells an animation how to apply styles to the target element before and after it is run.
+When the value is set to animation-fill-mode: forwards, this means that the target element will maintain the styles applied at the end of the animation.
+For example, if you apply the following animation to two elements on a page and one of them has a delay on the animation, you will see the second looks wrong because it goes from visible to hidden to visible.</description>
     </item>
     
     <item>

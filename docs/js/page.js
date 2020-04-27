@@ -87,13 +87,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
   navIcons.forEach((icon) => {
     icon.addEventListener('click', handleIconClick)
   })
+
   closeNav.addEventListener('click', handleCloseNavClick)
 
-  cta.addEventListener('click', handleCtaClick)
+  if (cta) {
+    cta.addEventListener('click', handleCtaClick)
+  }
 
   form.addEventListener('submit', handleFormSubmit)
 
-  window.addEventListener( 'scroll', handleScroll )
+  if (location.pathname == '/') {
+    window.addEventListener( 'scroll', handleScroll )
+  }
+
 } )
 
 // requestAnimationFrame
