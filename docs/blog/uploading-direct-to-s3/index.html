@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <title>
+      Best App Developers in Brisbane | DCUBED - Dream Design Develop
+    </title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:400,500,700,900|Raleway:900&amp;display=fallback" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <link rel="shortcut icon" href="/icon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
+</head>
+<body>
+      <div class="wrap"><div class="header header--slim" id="header">
+  <a href="/" class="header__logo">
+    <div class="dcubed-wrap">
+      <div class="dcubed">
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+        <div class="dcubed__cube"></div>
+      </div>
+      <div class="dcubed-border"></div>
+      <h1 class="dcubed-title">
+        <span>D</span>
+        <span>C</span>
+        <span>U</span>
+        <span>B</span>
+        <span>E</span>
+        <span>D</span>
+      </h1>
+    </div>
+  </a>
+</div><nav class="header__nav header__nav--inline" id="header-nav">
+  <a class="header__nav-icon header__nav-icon--open toggle-nav">
+    <i class="fas fa-bars"></i>
+  </a>
+  <a class="header__nav-icon header__nav-icon--close toggle-nav">
+    <i class="fas fa-times"></i>
+  </a>
+  <a href="/services/strategy-and-ux" class="header__nav-link">Product & Strategy</a>
+  <a href="/services/web-development" class="header__nav-link">Development</a>
+  <a href="/about" class="header__nav-link">About</a>
+  <a href="/blog" class="header__nav-link mobile-double">Blog</a>
+  <a href="#contact" class="btn btn--secondary btn--light close-nav">Get in touch</a>
+</nav>
+
+
+<div class="post-wrap">
+  <div class="container">
+    <h1 id="title" class="post-title">Uploading files direct to S3 using Vue, Dropzone &amp; NodeJS</h1>
+    <aside class="post-meta double">
+      <p id="date" class="flat">Published Mon Jan 1, 0001 </p>
+      <span class="desktop-only">| </span>
+      <p id="wordcount" class="flat"> 3 minute read</p>
+    </aside>
+    
+    <article id="content">
+      
+        <p class="h3 double">To upload files in a web application, a user&#39;s browser typically uploads directly to an application server. This approach comes with a variety of problems such as server timeouts, memory limitations and bandwidth costs associated with double-handling the file.</p>
+      
+      <p>Encountering this issue in a project recently, in which we use <a href="https://rowanwins.github.io/vue-dropzone/docs/dist/#/installation">vue-dropzone</a>, a Vue.js component for <a href="https://www.dropzonejs.com/">DropzoneJS</a> which appears to provide <a href="https://rowanwins.github.io/vue-dropzone/docs/dist/#/aws-s3-upload">upload directly to AWS S3</a> functionality out of the box.</p>
+<p>Looking at the documentation, it appears that we need a URL signer to return an S3 Policy in the following format:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{
+   <span style="color:#f1fa8c">&#34;signature&#34;</span>:{
+      <span style="color:#f1fa8c">&#34;Content-Type&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>,
+      <span style="color:#f1fa8c">&#34;acl&#34;</span>:<span style="color:#f1fa8c">&#34;public-read-write&#34;</span>,
+      <span style="color:#f1fa8c">&#34;success_action_status&#34;</span>:<span style="color:#f1fa8c">&#34;201&#34;</span>,
+      <span style="color:#f1fa8c">&#34;policy&#34;</span>:<span style="color:#f1fa8c">&#34;abc123&#34;</span>,
+      <span style="color:#f1fa8c">&#34;X-amz-credential&#34;</span>:<span style="color:#f1fa8c">&#34;AKIAIM3WELV3PLALOYDQ\/20171012\/us-west-2\/s3\/aws4_request&#34;</span>,
+      <span style="color:#f1fa8c">&#34;X-amz-algorithm&#34;</span>:<span style="color:#f1fa8c">&#34;AWS4-HMAC-SHA256&#34;</span>,
+      <span style="color:#f1fa8c">&#34;X-amz-date&#34;</span>:<span style="color:#f1fa8c">&#34;20171012T054729Z&#34;</span>,
+      <span style="color:#f1fa8c">&#34;X-amz-signature&#34;</span>:<span style="color:#f1fa8c">&#34;5227d84360d92ef8al45549805b3746f2f1d6641df8986aamcr939c35513cd7c&#34;</span>,
+      <span style="color:#f1fa8c">&#34;key&#34;</span>:<span style="color:#f1fa8c">&#34;&#34;</span>
+   },
+   <span style="color:#f1fa8c">&#34;postEndpoint&#34;</span>:<span style="color:#f1fa8c">&#34;\/\/s3-us-west-2.amazonaws.com\/my-bucket&#34;</span>
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>The PHP library linked to from the documentation is no help in determining how we go about generating this policy from the AWS SDK in NodeJS, which is what our server is written in.</p>
+<p>Stumbling across the blog post <a href="https://blog.webiny.com/upload-files-to-aws-s3-using-pre-signed-post-data-and-a-lambda-function-7a9fb06d56c1">Upload files to AWS S3 using pre-signed POST data and a Lambda function</a> spells out the solution:</p>
+<blockquote>
+<p>By using pre-signed POST data, rather than our own servers, S3 enables us to perform uploads directly to [S3], in a controlled, performant, and very safe manner.</p>
+</blockquote>
+<p>Looking in the <a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#createPresignedPost-property">AWS SDK docs</a>, it appears the method we need is called actually <code>createPresignedPost</code>.</p>
+<p>We could potentially go down the serverless (Lambda) route as suggested in the above post, however since we already have a Node server running for this sort of thing, it&rsquo;s a simple matter of adding a new convinience method for <code>createPresignedPost</code> and a new URL route <code>/s3-policy</code> to generate this policy.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">import</span> <span style="color:#ff79c6">*</span> as AWS from &#39;aws<span style="color:#ff79c6">-</span>sdk&#39;
+<span style="color:#ff79c6">import</span> { AWS_CONFIG, S3_BUCKET } from &#39;.<span style="color:#ff79c6">/</span>constants&#39;
+AWS.config.<span style="color:#50fa7b">update</span>(AWS_CONFIG)
+
+export <span style="color:#8be9fd;font-style:italic">const</span> s3 = new AWS.<span style="color:#50fa7b">S3</span>()
+
+export <span style="color:#8be9fd;font-style:italic">const</span> createPresignedPost: any = (key) =&gt; {
+  <span style="color:#ff79c6">return</span> new <span style="color:#50fa7b">Promise</span>((resolve, reject) =&gt; {
+    <span style="color:#8be9fd;font-style:italic">const</span> params = {
+      Bucket: S3_BUCKET,
+      Fields: {
+        key,
+      },
+      Expires: <span style="color:#bd93f9">60</span>,
+    }
+    s3.<span style="color:#50fa7b">createPresignedPost</span>(params, (err, data) =&gt; {
+      <span style="color:#ff79c6">if</span> (err) {
+        console.<span style="color:#50fa7b">log</span>(err)
+        <span style="color:#ff79c6">return</span> <span style="color:#50fa7b">reject</span>(err)
+      } <span style="color:#ff79c6">else</span> {
+        <span style="color:#ff79c6">return</span> <span style="color:#50fa7b">resolve</span>(data)
+      }
+    })
+  })
+}
+
+app.<span style="color:#50fa7b">post</span>(&#39;<span style="color:#ff79c6">/</span>s3<span style="color:#ff79c6">-</span>policy&#39;, (req, res) =&gt; {
+  <span style="color:#8be9fd;font-style:italic">const</span> {Key} = req.query
+  <span style="color:#50fa7b">createPresignedPost</span>(Key).<span style="color:#50fa7b">then</span>(d =&gt; {
+    <span style="color:#6272a4">// transform into format required by vue-dropzone implementation
+</span><span style="color:#6272a4"></span>    res.<span style="color:#50fa7b">send</span>({
+      signature: d.fields,
+      postEndpoint: d.url,
+    })
+  }).<span style="color:#50fa7b">catch</span>(err =&gt; {
+    res.<span style="color:#50fa7b">status</span>(<span style="color:#bd93f9">500</span>).<span style="color:#50fa7b">send</span>({ message: err })
+  })
+})</code></pre></td></tr></table>
+</div>
+</div>
+<p>Now with our S3 policy endpoint in place, it&rsquo;s just a matter of updating our VueJS Component configuration. In our component&rsquo;s Javascript, we have:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">videoDropzoneOptions = {
+  url: BASE_URL <span style="color:#ff79c6">+</span> &#39;<span style="color:#ff79c6">/</span>video<span style="color:#ff79c6">-</span>upload<span style="color:#ff79c6">-</span>success&#39;,
+  thumbnailWidth: <span style="color:#bd93f9">150</span>,
+  maxFiles: <span style="color:#bd93f9">1</span>,
+  maxFilesize: <span style="color:#bd93f9">512</span>, <span style="color:#6272a4">// mb
+</span><span style="color:#6272a4"></span>  uploadprogress: this.videoUploadProgress
+}
+
+awss3 = {
+  signingURL: this.signingUrl,
+  headers: {},
+  params : {},
+  sendFileToServer : <span style="color:#ff79c6">true</span>,
+  withCredentials: <span style="color:#ff79c6">false</span>
+}
+
+<span style="color:#50fa7b">signingUrl</span>(f) {
+  <span style="color:#ff79c6">return</span> &#39;<span style="color:#ff79c6">/</span>s3<span style="color:#ff79c6">-</span>policy?key=&#39; <span style="color:#ff79c6">+</span> this.videoKey
+}
+
+<span style="color:#50fa7b">s3UploadError</span>(errorMessage) {
+  console.<span style="color:#50fa7b">log</span>(&#39;s3UploadError&#39;, {errorMessage})
+  console.<span style="color:#50fa7b">log</span>(&#39;s3UploadError&#39;, this.$refs.VideoDropzone.<span style="color:#50fa7b">getAcceptedFiles</span>()[<span style="color:#bd93f9">0</span>].name)
+}
+
+<span style="color:#50fa7b">s3UploadSuccess</span>(s3ObjectLocation) {
+  console.<span style="color:#50fa7b">log</span>(&#39;s3UploadSuccess&#39;, {s3ObjectLocation})
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p>And in the component&rsquo;s template we have:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">&lt;vue<span style="color:#ff79c6">-</span>dropzone
+   id=<span style="color:#f1fa8c">&#34;VideoDropzone&#34;</span>
+   ref=<span style="color:#f1fa8c">&#34;VideoDropzone&#34;</span>
+   class=<span style="color:#f1fa8c">&#34;Dropzone Dropzone--video&#34;</span>
+   v<span style="color:#ff79c6">-</span>show=<span style="color:#f1fa8c">&#34;!currentCard.video&#34;</span>
+   :options=<span style="color:#f1fa8c">&#34;videoDropzoneOptions&#34;</span>
+   :includeStyling=<span style="color:#f1fa8c">&#34;false&#34;</span>
+   :awss3=<span style="color:#f1fa8c">&#34;awss3&#34;</span>
+   @vdropzone<span style="color:#ff79c6">-</span>sending=<span style="color:#f1fa8c">&#34;sendingEvent&#34;</span>
+   @vdropzone<span style="color:#ff79c6">-</span>success=<span style="color:#f1fa8c">&#34;videoSuccess&#34;</span>
+   @vdropzone<span style="color:#ff79c6">-</span>s3<span style="color:#ff79c6">-</span>upload<span style="color:#ff79c6">-</span><span style="color:#8be9fd">error</span>=<span style="color:#f1fa8c">&#34;s3UploadError&#34;</span>
+   @vdropzone<span style="color:#ff79c6">-</span>s3<span style="color:#ff79c6">-</span>upload<span style="color:#ff79c6">-</span>success=<span style="color:#f1fa8c">&#34;s3UploadSuccess&#34;</span>
+&gt;&lt;<span style="color:#ff79c6">/</span>vue<span style="color:#ff79c6">-</span>dropzone&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="lets-try-it-out">Let&rsquo;s try it out</h2>
+<p><img src="/upload-s3.png" alt="&lsquo;screenshot&rsquo;"></p>
+<p>Trying this all out in the browser, we experience partial success:</p>
+<p>Note the initial successful request for our S3 policy, followed by a direct upload to S3 with a response code of <code>204 No Content</code>.</p>
+<p>We can confirm the file has uploaded by checking our <a href="https://s3.console.aws.amazon.com/s3/buckets/">S3 Management Console</a>.</p>
+<p>To prevent the error handler firing on <code>204</code> response, there seems to be a <a href="https://github.com/rowanwins/vue-dropzone/pull/461">pull request</a>. It doesn&rsquo;t look like it will be getting merged any time soon, so to use that version in our app we can run:</p>
+<p><code>yarn add https://github.com/inventionlabsSydney/vue-dropzone</code></p>
+
+    </article>
+    <aside id="meta">
+      <div>
+        
+        
+      </div><div class="post-pagination">
+  
+  <a class="previous btn btn--secondary" href="http://dcubed.com.au/blog/when-to-animate-vs-transition/">
+    <i class="fas fa-chevron-left" style="margin-right: 0.75rem"></i>
+    When to use animate or transition in CSS 
+  </a>
+  
+  
+  <a class="next btn btn--secondary" href="http://dcubed.com.au/blog/simple-ab-test-in-prototypes/">
+    Simple way to A/B test in your prototypes <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
+  </a>
+  
+</div>
+</aside>
+  </div>
+</div>
+<section class="recent-posts">
+  <h1 class="section-title double">Recent posts</h1>
+  <div class="posts">
+    
+        <a class="post" href="http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/">
+          
+            <div class="post__header" style="background-image: url(/post-header-fill-small.png)">
+            </div>
+          
+          
+          <div class="post__body">
+            <h4>Create smoother animations with animation-fill-mode</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/prototyping-with-real-data/">
+          
+          
+            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            </div>
+          
+          <div class="post__body">
+            <h4>Creating fool proof prototypes with production data</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/finx-case-study/">
+          
+            <div class="post__header" style="background-image: url(/post-header-finx.png)">
+            </div>
+          
+          
+          <div class="post__body">
+            <h4>Finance X - Case Study</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/grow2-case-study/">
+          
+          
+            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            </div>
+          
+          <div class="post__body">
+            <h4>Grow2 - Case Study</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+  </div>
+</section>
+<footer class="footer" id="contact">
+  <div class="container container--small">
+    <h1 class="section-title light-title">Get in touch!</h1>
+    <p class="double">Whether you need to create a new product from scratch, drastically improve a product or give your team an innovative kick, DCUBED has you covered. To know more, request a consultation through this form:</p>
+    <form method="POST" action="https://formspree.io/mbjankzq" class="form" id="form">
+      <div class="form__content">
+        <div class="form__group">
+          <input type="text" id="first-name" name="firstName" placeholder="First name*" class="form__input"
+                                                                                        required>
+        </div>
+        <div class="form__group">
+          <input type="email" name="email" placeholder="Email address" class="form__input"
+                                                                      required>
+        </div>
+        <div class="form__group desktop-only">
+          <input type="text" name="company" placeholder="Company name" class="form__input">
+        </div>
+        <div class="form__group desktop-only">
+          <input type="text" name="title" placeholder="What is the title in your company?" class="form__input">
+        </div>
+        <div class="form__group mobile-double">
+          <input type="tel" name="phone" placeholder="Phone number*"  class="form__input"
+                                                                      required>
+        </div>
+        <div class="form__group double desktop-only">
+          <input type="text" name="refer" placeholder="How did you hear about us?" class="form__input">
+        </div>
+        <h3>How can DCUBED help?</h3>
+        <div class="form__group double">
+          <label for="ux" class="form__checkbox">
+            <input type="checkbox" id="ux" name="serviceUx">
+            <span>I'm looking for top notch UI/UX design for an idea.</span>
+          </label>
+          <label for="dev" class="form__checkbox">
+            <input type="checkbox" id="dev" name="serviceDev">
+            <span>I need classy engineers to build something I have already designed.</span>
+          </label>
+          <label for="all" class="form__checkbox">
+            <input type="checkbox" id="all" name="serviceAll">
+            <span>I would like an entire product built from the ground up.</span>
+          </label>
+        </div>
+        <button class="btn btn--large btn--block" id="form-submit">Submit Form</button>
+      </div>
+      <div class="form__success">
+        <h2>Thanks for your enquiry</h2>
+        <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
+        <p>- Jason from DCUBED</p>
+      </div>
+      <div class="form__error">
+        <h2>Something wen't wrong</h2>
+        <p>Not sure what happened here. You can try again or feel free to
+        email us below.</p>
+        <p>- Jason from DCUBED</p>
+      </div>
+    </form>
+  </div>
+</footer>
+<script src="/js/page.js"></script>
+</div>
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-110929649-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

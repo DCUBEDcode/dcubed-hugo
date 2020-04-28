@@ -26,8 +26,8 @@
       <pubDate>Thu, 23 Apr 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/services/strategy-and-ux/</guid>
-      <description>Design Sprints DCUBED can facilitate or train teams on how to run design sprints is a five day process for validating ideas and solving big challenges through prototyping and testing ideas with customer
-App design If you have your own development team and just need someone who can help you untangle your thoughts and visually bring them to life, we can also help with this.Fortunately, we speak the same language developers do, so we can make sure that we create achievable designs and work with your team to execute.</description>
+      <description>Design at DCUBED is done very different to how things typically play out at other agencies. We have figured out over the years that the quicker we learn about a design, the more success we have with it. And there is no way faster way to get your hands on a design than through code.
+Our proficiency with CSS and other front end languages means that once we move past a &amp;ldquo;white board sesh&amp;rdquo;, we&amp;rsquo;re ready to start bringing our ideas to life.</description>
     </item>
     
     <item>
@@ -84,6 +84,17 @@ Why is this so good? When you use animation-fill-mode: forward you can set the i
       
       <guid>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Uploading files direct to S3 using Vue, Dropzone &amp; NodeJS</title>
+      <link>http://dcubed.com.au/blog/uploading-direct-to-s3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dcubed.com.au/blog/uploading-direct-to-s3/</guid>
+      <description>Encountering this issue in a project recently, in which we use vue-dropzone, a Vue.js component for DropzoneJS which appears to provide upload directly to AWS S3 functionality out of the box.
+Looking at the documentation, it appears that we need a URL signer to return an S3 Policy in the following format:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &amp;#34;signature&amp;#34;:{ &amp;#34;Content-Type&amp;#34;:&amp;#34;&amp;#34;, &amp;#34;acl&amp;#34;:&amp;#34;public-read-write&amp;#34;, &amp;#34;success_action_status&amp;#34;:&amp;#34;201&amp;#34;, &amp;#34;policy&amp;#34;:&amp;#34;abc123&amp;#34;, &amp;#34;X-amz-credential&amp;#34;:&amp;#34;AKIAIM3WELV3PLALOYDQ\/20171012\/us-west-2\/s3\/aws4_request&amp;#34;, &amp;#34;X-amz-algorithm&amp;#34;:&amp;#34;AWS4-HMAC-SHA256&amp;#34;, &amp;#34;X-amz-date&amp;#34;:&amp;#34;20171012T054729Z&amp;#34;, &amp;#34;X-amz-signature&amp;#34;:&amp;#34;5227d84360d92ef8al45549805b3746f2f1d6641df8986aamcr939c35513cd7c&amp;#34;, &amp;#34;key&amp;#34;:&amp;#34;&amp;#34; }, &amp;#34;postEndpoint&amp;#34;:&amp;#34;\/\/s3-us-west-2.</description>
     </item>
     
     <item>

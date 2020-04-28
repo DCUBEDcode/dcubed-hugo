@@ -4,7 +4,7 @@ intro: "To upload files in a web application, a user's browser typically uploads
 draft: false
 ---
 
-Encountering this issue in a project recently, in which we use vue-dropzone, a Vue.js component for DropzoneJS which appears to provide upload directly to AWS S3 functionality out of the box.
+Encountering this issue in a project recently, in which we use [vue-dropzone](https://rowanwins.github.io/vue-dropzone/docs/dist/#/installation), a Vue.js component for [DropzoneJS](https://www.dropzonejs.com/) which appears to provide [upload directly to AWS S3](https://rowanwins.github.io/vue-dropzone/docs/dist/#/aws-s3-upload) functionality out of the box.
 
 Looking at the documentation, it appears that we need a URL signer to return an S3 Policy in the following format:
 
@@ -27,11 +27,11 @@ Looking at the documentation, it appears that we need a URL signer to return an 
 
 The PHP library linked to from the documentation is no help in determining how we go about generating this policy from the AWS SDK in NodeJS, which is what our server is written in.
 
-Stumbling across the blog post Upload files to AWS S3 using pre-signed POST data and a Lambda function spells out the solution:
+Stumbling across the blog post [Upload files to AWS S3 using pre-signed POST data and a Lambda function](https://blog.webiny.com/upload-files-to-aws-s3-using-pre-signed-post-data-and-a-lambda-function-7a9fb06d56c1) spells out the solution:
 
 > By using pre-signed POST data, rather than our own servers, S3 enables us to perform uploads directly to [S3], in a controlled, performant, and very safe manner.
 
-Looking in the AWS SDK docs, it appears the method we need is called actually `createPresignedPost`.
+Looking in the [AWS SDK docs](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#createPresignedPost-property), it appears the method we need is called actually `createPresignedPost`.
 
 We could potentially go down the serverless (Lambda) route as suggested in the above post, however since we already have a Node server running for this sort of thing, it's a simple matter of adding a new convinience method for `createPresignedPost` and a new URL route `/s3-policy` to generate this policy.
 
@@ -136,9 +136,9 @@ Trying this all out in the browser, we experience partial success:
 
 Note the initial successful request for our S3 policy, followed by a direct upload to S3 with a response code of `204 No Content`.
 
-We can confirm the file has uploaded by checking our S3 Management Console
+We can confirm the file has uploaded by checking our [S3 Management Console](https://s3.console.aws.amazon.com/s3/buckets/).
 
-To prevent the error handler firing on `204` response, there seems to be a pull request. It doesn't look like it will be getting merged any time soon, so to use that version in our app we can run:
+To prevent the error handler firing on `204` response, there seems to be a [pull request](https://github.com/rowanwins/vue-dropzone/pull/461). It doesn't look like it will be getting merged any time soon, so to use that version in our app we can run:
 
 `yarn add https://github.com/inventionlabsSydney/vue-dropzone`
 
