@@ -68,7 +68,7 @@
     
     <article id="content">
       
-        <p class="h3 double">`animation-fill-mode` can supercharge your animations, by allowing you to take control of your page&#39;s choreography.</p>
+        <p class="h3 double">Supercharge your animations by taking control of your animated elements, before and after they run their animations.</p>
       
       <h2 id="what-is-animation-fill-mode">What is animation-fill-mode?</h2>
 <p><code>animation-fill-mode</code> is a CSS property which tells an animation how to apply styles to the target element before or after it is run.</p>
@@ -107,37 +107,43 @@ into view to show heirarchy or to add emphasis to particular ones.</p>
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  &lt;div class=<span style="color:#f1fa8c">&#34;box box&#34;</span>&gt;Box <span style="color:#bd93f9">1</span>&lt;<span style="color:#ff79c6">/</span>div&gt;
-  &lt;div class=<span style="color:#f1fa8c">&#34;box box--2&#34;</span>&gt;Box <span style="color:#bd93f9">2</span>&lt;<span style="color:#ff79c6">/</span>div&gt;</code></pre></td></tr></table>
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  &lt;ul class=<span style="color:#f1fa8c">&#34;animated-list&#34;</span>&gt;
+    &lt;li&gt;Sergio Aguero&lt;<span style="color:#ff79c6">/</span>li&gt;
+    &lt;li&gt;Virgil Van Dyke&lt;<span style="color:#ff79c6">/</span>li&gt;
+    &lt;li&gt;Eden Hazard&lt;<span style="color:#ff79c6">/</span>li&gt;
+    &lt;li&gt;John Terry&lt;<span style="color:#ff79c6">/</span>li&gt;
+    &lt;li&gt;Fernando Torres&lt;<span style="color:#ff79c6">/</span>li&gt;
+  &lt;<span style="color:#ff79c6">/</span>ul&gt;</code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="css">CSS</h3>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  .box {
-    width: <span style="color:#bd93f9">100</span>px;
-    height: <span style="color:#bd93f9">100</span>px;
-    background: DarkGoldenRod;
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  .animated<span style="color:#ff79c6">-</span>list li {
     animation: fadeIn <span style="color:#bd93f9">375</span>ms ease;
   }
 
-  .box<span style="color:#ff79c6">--</span><span style="color:#bd93f9">2</span> {
-    animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">375</span>ms;
-  }</code></pre></td></tr></table>
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">2</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">250</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">3</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">500</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">4</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">750</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">5</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">1000</span>ms }</code></pre></td></tr></table>
 </div>
 </div>
 <p>To prevent this we want to make sure that each element appears hidden to begin
@@ -148,8 +154,8 @@ hidden.</p>
   <h3 class="well__title pressed">Why use Opacity?</h3>
   <p class="flat">Opacity and transform are the two properties that let you get away with cheap animations that most likely will hit that sweet 60 frames per second.</p>
 </div>
-<p>To keep things how we want them, we can add <code>animation-fill-mode: forwards</code> or shorthand <code>animation: fadeIn 375ms ease forwards</code>.</p>
-<h3 id="css-with-fill-mode-set">CSS with fill-mode set</h3>
+<h3 id="css-with-fill-mode-applied">CSS with fill-mode applied</h3>
+<p>Now if we use <code>animation-fill-mode: forwards</code> and set all the list items to have <code>opacity: 0</code>, we will now see they all appear hidden and reveal once the animation is complete.
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -162,23 +168,20 @@ hidden.</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  .box {
-    width: <span style="color:#bd93f9">100</span>px;
-    height: <span style="color:#bd93f9">100</span>px;
-    background: DarkGoldenRod;
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  .animated<span style="color:#ff79c6">-</span>list li {
     animation: fadeIn <span style="color:#bd93f9">375</span>ms ease;
     animation<span style="color:#ff79c6">-</span>fill<span style="color:#ff79c6">-</span>mode: forwards;
+    opacity: <span style="color:#bd93f9">0</span>;
   }
 
-  .box<span style="color:#ff79c6">--</span><span style="color:#bd93f9">2</span> {
-    animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">375</span>ms;
-  }</code></pre></td></tr></table>
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">2</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">250</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">3</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">500</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">4</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">750</span>ms }
+  .animated<span style="color:#ff79c6">-</span>list li:nth<span style="color:#ff79c6">-</span><span style="color:#50fa7b">child</span>(<span style="color:#bd93f9">5</span>) { animation<span style="color:#ff79c6">-</span>delay: <span style="color:#bd93f9">1000</span>ms }</code></pre></td></tr></table>
 </div>
-</div>
-<p>Now the boxes will be hidden to start off with and stay visible once the animation is complete.</p>
+</div></p>
 
     </article>
     <aside id="meta">

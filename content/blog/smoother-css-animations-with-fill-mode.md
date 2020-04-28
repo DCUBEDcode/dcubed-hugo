@@ -1,6 +1,6 @@
 ---
 title: 'Create smoother animations with animation-fill-mode'
-intro: "`animation-fill-mode` can supercharge your animations, by allowing you to take control of your page's choreography."
+intro: "Supercharge your animations by taking control of your animated elements, before and after they run their animations."
 heroSmallUrl: '/post-header-fill-small.png'
 heroLargeUrl: '/post-header-fill-large@2x.png'
 draft: false
@@ -36,22 +36,25 @@ Let's say we want to create a list of elements which will fade in each item one 
 
 ### HTML
 {{< highlight go >}}
-  <div class="box box">Box 1</div>
-  <div class="box box--2">Box 2</div>
+  <ul class="animated-list">
+    <li>Sergio Aguero</li>
+    <li>Virgil Van Dyke</li>
+    <li>Eden Hazard</li>
+    <li>John Terry</li>
+    <li>Fernando Torres</li>
+  </ul>
 {{< / highlight >}}
 
 ### CSS
 {{< highlight go >}}
-  .box {
-    width: 100px;
-    height: 100px;
-    background: DarkGoldenRod;
+  .animated-list li {
     animation: fadeIn 375ms ease;
   }
 
-  .box--2 {
-    animation-delay: 375ms;
-  }
+  .animated-list li:nth-child(2) { animation-delay: 250ms }
+  .animated-list li:nth-child(3) { animation-delay: 500ms }
+  .animated-list li:nth-child(4) { animation-delay: 750ms }
+  .animated-list li:nth-child(5) { animation-delay: 1000ms }
 {{< / highlight >}}
 
 To prevent this we want to make sure that each element appears hidden to begin
@@ -61,22 +64,18 @@ hidden.
 
 {{% well title="Why use Opacity?" body="Opacity and transform are the two properties that let you get away with cheap animations that most likely will hit that sweet 60 frames per second." %}}
 
-To keep things how we want them, we can add `animation-fill-mode: forwards` or shorthand `animation: fadeIn 375ms ease forwards`. 
-
-### CSS with fill-mode set
+### CSS with fill-mode applied
+Now if we use `animation-fill-mode: forwards` and set all the list items to have `opacity: 0`, we will now see they all appear hidden and reveal once the animation is complete.
 {{< highlight go >}}
-  .box {
-    width: 100px;
-    height: 100px;
-    background: DarkGoldenRod;
+  .animated-list li {
     animation: fadeIn 375ms ease;
     animation-fill-mode: forwards;
+    opacity: 0;
   }
 
-  .box--2 {
-    animation-delay: 375ms;
-  }
+  .animated-list li:nth-child(2) { animation-delay: 250ms }
+  .animated-list li:nth-child(3) { animation-delay: 500ms }
+  .animated-list li:nth-child(4) { animation-delay: 750ms }
+  .animated-list li:nth-child(5) { animation-delay: 1000ms }
 {{< / highlight >}}
-
-Now the boxes will be hidden to start off with and stay visible once the animation is complete.
 
