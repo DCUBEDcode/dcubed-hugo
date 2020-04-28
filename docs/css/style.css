@@ -43,6 +43,15 @@ ul {
   margin-left: 1em;
 }
 
+figure {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+figcaption {
+  text-align: center;
+}
+
 code {
   background: #eee;
   padding: 0.2rem 0.4rem;
