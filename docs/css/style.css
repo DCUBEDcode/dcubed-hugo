@@ -1027,7 +1027,7 @@ h3,
 }
 
 .well {
-  margin: 2rem -2rem;
+  margin: 2rem 0;
   padding: 2rem;
   background: #28a0ff0a;
   border: 10px solid #0000000f;
@@ -1269,6 +1269,11 @@ h3,
 }
 
 @media(min-width: 1200px) {
+
+  .well {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 
   .posts {
     grid-template-columns: 1fr 1fr 1fr 1fr;
