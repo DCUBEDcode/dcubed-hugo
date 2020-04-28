@@ -7,6 +7,7 @@ publishDir = "docs"
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "pygments"
+googleAnalytics = "UA-110929649-1"
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
