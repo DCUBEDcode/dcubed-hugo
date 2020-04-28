@@ -55,7 +55,12 @@
 
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="double">Create smoother animations with animation-fill-mode</h1>
+    <h1 id="title" class="post-title">Create smoother animations with animation-fill-mode</h1>
+    <aside class="post-meta double">
+      <p id="date" class="flat">Published Mon Jan 1, 0001 </p>
+      <span class="desktop-only">| </span>
+      <p id="wordcount" class="flat"> 2 minute read</p>
+    </aside>
     
       <div class="double">
         <img src="/post-header-fill-large@2x.png" alt="" />
@@ -66,9 +71,15 @@
         <p class="h3 double">`animation-fill-mode` can supercharge your animations, by allowing you to take control of your page&#39;s choreography.</p>
       
       <h2 id="what-is-animation-fill-mode">What is animation-fill-mode?</h2>
-<p><code>animation-fill-mode</code> is a CSS property tells an animation how to apply styles to the target element before and after it is run.</p>
-<p>When the value is set to <code>animation-fill-mode: forwards</code>, this means that the target element will maintain the styles applied at the end of the animation.</p>
-<p>For example, if you apply the following animation to two elements on a page and one of them has a delay on the animation, you will see the second looks wrong because it goes from visible to hidden to visible.</p>
+<p><code>animation-fill-mode</code> is a CSS property which tells an animation how to apply styles to the target element before or after it is run.</p>
+<p>In this post we will be focussing on the use of the value <code>animation-fill-mode: forwards</code>, This value allows the target element to maintain the styles applied in the final keyframes of it&rsquo;s animation.</p>
+<h3 id="why-is-this-so-good">Why is this so good?</h3>
+<p>When you use <code>animation-fill-mode: forward</code> you can set the initial styles of
+elements to be hidden or offscreen and then use the styles in your keysframes
+to determine the final state of your UI. This allows you to stagger elements
+into view to show heirarchy or to add emphasis to particular ones.</p>
+<h2 id="example">Example</h2>
+<p>Let&rsquo;s say we want to create a list of elements which will fade in each item one after the other. If you apply the following animation to these list items and try to add the desired delay to each one, you will see the things don&rsquo;t quite look right as they go from visible to hidden to visible.</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -129,10 +140,14 @@
   }</code></pre></td></tr></table>
 </div>
 </div>
-<p>To prevent this we want to make sure the second element appears hidden to begin
+<p>To prevent this we want to make sure that each element appears hidden to begin
 with.  We can do this by setting <code>opacity: 0</code> for the boxes. This will solve
 our problems at the start, but once the animation runs the boxes would return to
 hidden.</p>
+<div class="well">
+  <h3 class="well__title pressed">Why use Opacity?</h3>
+  <p class="flat">Opacity and transform are the two properties that let you get away with cheap animations that most likely will hit that sweet 60 frames per second.</p>
+</div>
 <p>To keep things how we want them, we can add <code>animation-fill-mode: forwards</code> or shorthand <code>animation: fadeIn 375ms ease forwards</code>.</p>
 <h3 id="css-with-fill-mode-set">CSS with fill-mode set</h3>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -168,22 +183,74 @@ hidden.</p>
     </article>
     <aside id="meta">
       <div>
-        <section class="post-meta">
-          <p id="date">Published Mon Jan 1, 0001 </p>
-          <p id="wordcount"> 270 Words </p>
-        </section>
         
         
-      </div>
-      <div>
-        
-        <a class="previous" href="http://dcubed.com.au/blog/prototyping-with-real-data/"> Creating fool proof prototypes with production data</a>
-        
-        
-      </div>
-    </aside>
+      </div><div class="post-pagination">
+  
+  <a class="previous btn btn--secondary" href="http://dcubed.com.au/blog/prototyping-with-real-data/">
+    <i class="fas fa-chevron-left" style="margin-right: 0.75rem"></i>
+    Creating fool proof prototypes with production data 
+  </a>
+  
+  
+</div>
+</aside>
   </div>
 </div>
+<section class="recent-posts">
+  <h1 class="section-title double">Recent posts</h1>
+  <div class="posts">
+    
+        <a class="post" href="http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/">
+          
+            <div class="post__header" style="background-image: url(/post-header-fill-small.png)">
+            </div>
+          
+          
+          <div class="post__body">
+            <h4>Create smoother animations with animation-fill-mode</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/prototyping-with-real-data/">
+          
+          
+            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            </div>
+          
+          <div class="post__body">
+            <h4>Creating fool proof prototypes with production data</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/finx-case-study/">
+          
+            <div class="post__header" style="background-image: url(/post-header-finx.png)">
+            </div>
+          
+          
+          <div class="post__body">
+            <h4>Finance X - Case Study</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+        <a class="post" href="http://dcubed.com.au/blog/grow2-case-study/">
+          
+          
+            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            </div>
+          
+          <div class="post__body">
+            <h4>Grow2 - Case Study</h4>
+            <p>Mon, Jan 1, 0001</p>
+          </div>
+        </a>
+    
+  </div>
+</section>
 <footer class="footer" id="contact">
   <div class="container container--small">
     <h1 class="section-title light-title">Get in touch!</h1>

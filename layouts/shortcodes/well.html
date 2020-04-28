@@ -1,0 +1,8 @@
+{{/* DEFAULTS */}}
+{{ $title := "" }}
+{{ $body := "" }}
+
+<div class="well">
+  <h3 class="well__title pressed">{{ .Get "title" }}</h3>
+  <p class="flat">{{ .Get "body" }}</p>
+</div>

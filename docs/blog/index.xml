@@ -16,9 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/</guid>
-      <description>What is animation-fill-mode? animation-fill-mode is a CSS property tells an animation how to apply styles to the target element before and after it is run.
-When the value is set to animation-fill-mode: forwards, this means that the target element will maintain the styles applied at the end of the animation.
-For example, if you apply the following animation to two elements on a page and one of them has a delay on the animation, you will see the second looks wrong because it goes from visible to hidden to visible.</description>
+      <description>What is animation-fill-mode? animation-fill-mode is a CSS property which tells an animation how to apply styles to the target element before or after it is run.
+In this post we will be focussing on the use of the value animation-fill-mode: forwards, This value allows the target element to maintain the styles applied in the final keyframes of it&amp;rsquo;s animation.
+Why is this so good? When you use animation-fill-mode: forward you can set the initial styles of elements to be hidden or offscreen and then use the styles in your keysframes to determine the final state of your UI.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ For example, if you apply the following animation to two elements on a page and 
     </item>
     
     <item>
-      <title>Finance X</title>
+      <title>Finance X - Case Study</title>
       <link>http://dcubed.com.au/blog/finx-case-study/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -40,7 +40,7 @@ For example, if you apply the following animation to two elements on a page and 
     </item>
     
     <item>
-      <title>Grow2</title>
+      <title>Grow2 - Case Study</title>
       <link>http://dcubed.com.au/blog/grow2-case-study/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

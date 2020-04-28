@@ -8,11 +8,20 @@ draft: false
 
 ## What is animation-fill-mode?
 
-`animation-fill-mode` is a CSS property tells an animation how to apply styles to the target element before and after it is run.
+`animation-fill-mode` is a CSS property which tells an animation how to apply styles to the target element before or after it is run.
 
-When the value is set to `animation-fill-mode: forwards`, this means that the target element will maintain the styles applied at the end of the animation.
+In this post we will be focussing on the use of the value `animation-fill-mode: forwards`, This value allows the target element to maintain the styles applied in the final keyframes of it's animation.
 
-For example, if you apply the following animation to two elements on a page and one of them has a delay on the animation, you will see the second looks wrong because it goes from visible to hidden to visible.
+### Why is this so good?
+
+When you use `animation-fill-mode: forward` you can set the initial styles of
+elements to be hidden or offscreen and then use the styles in your keysframes
+to determine the final state of your UI. This allows you to stagger elements
+into view to show heirarchy or to add emphasis to particular ones.
+
+## Example
+
+Let's say we want to create a list of elements which will fade in each item one after the other. If you apply the following animation to these list items and try to add the desired delay to each one, you will see the things don't quite look right as they go from visible to hidden to visible.
 
 {{< highlight go >}}
   @keyframes fadeIn {
@@ -45,10 +54,12 @@ For example, if you apply the following animation to two elements on a page and 
   }
 {{< / highlight >}}
 
-To prevent this we want to make sure the second element appears hidden to begin
+To prevent this we want to make sure that each element appears hidden to begin
 with.  We can do this by setting `opacity: 0` for the boxes. This will solve
 our problems at the start, but once the animation runs the boxes would return to
 hidden.
+
+{{% well title="Why use Opacity?" body="Opacity and transform are the two properties that let you get away with cheap animations that most likely will hit that sweet 60 frames per second." %}}
 
 To keep things how we want them, we can add `animation-fill-mode: forwards` or shorthand `animation: fadeIn 375ms ease forwards`. 
 

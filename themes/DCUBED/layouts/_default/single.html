@@ -4,7 +4,12 @@
 {{ define "main" }}
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="double">{{ .Title }}</h1>
+    <h1 id="title" class="post-title">{{ .Title }}</h1>
+    <aside class="post-meta double">
+      <p id="date" class="flat">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
+      <span class="desktop-only">| </span>
+      <p id="wordcount" class="flat"> {{ .ReadingTime }} minute read</p>
+    </aside>
     {{ if .Params.heroLargeUrl }}
       <div class="double">
         <img src="{{ .Params.heroLargeUrl }}" alt="" />
@@ -18,10 +23,6 @@
     </article>
     <aside id="meta">
       <div>
-        <section class="post-meta">
-          <p id="date">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
-          <p id="wordcount"> {{ .WordCount }} Words </p>
-        </section>
         {{ with .Params.topics }}
         <ul id="topics">
           {{ range . }}
@@ -37,14 +38,7 @@
         </ul>
         {{ end }}
       </div>
-      <div>
-        {{ with .PrevInSection }}
-        <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-        <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-      </div>
+      {{- partial "pagination.html" . -}}
     </aside>
   </div>
 </div>

@@ -7,16 +7,6 @@
 			  {{ range ($casestudy.Pages) }}
           <div class="casestudy">
             <div class="casestudy__image casestudy__image--grow">
-              <div class="grow2" id="grow2">
-                <div class="grow2__hero">
-                  <img src="grow2.svg" alt="" class="grow2__logo">
-                  <div class="grow2__title">Great job!</div>
-                  <div class="grow2__score">
-                    5
-                    <span>out of 5</span>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="casestudy__copy">
               <h2>{{ .Title }}</h2>
@@ -76,25 +66,4 @@
       </section>
     </div>
   </div>
-  <section class="recent-posts">
-    <h1 class="section-title double">Recent posts</h1>
-    <div class="posts">
-      {{ range first 4 (where (where .Site.RegularPages "Type" "blog") "Type" "!=" "casestudy") }}
-          <a class="post" href="{{ .Permalink }}">
-            {{ if .Params.heroSmallUrl }}
-              <div class="post__header" style="background-image: url({{ .Params.heroSmallUrl }})">
-              </div>
-            {{ end }}
-            {{ if not .Params.heroSmallUrl }}
-              <div class="post__header" style="background-image: url(post-1.jpeg)">
-              </div>
-            {{ end }}
-            <div class="post__body">
-              <h4>{{ .Title }}</h4>
-              <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-            </div>
-          </a>
-      {{ end }}
-    </div>
-  </section>
 {{ end }}

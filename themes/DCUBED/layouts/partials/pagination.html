@@ -1,0 +1,13 @@
+<div class="post-pagination">
+  {{ with .PrevInSection }}
+  <a class="previous btn btn--secondary" href="{{.Permalink}}">
+    <i class="fas fa-chevron-left" style="margin-right: 0.75rem"></i>
+    {{.Title}} 
+  </a>
+  {{ end }}
+  {{ with .NextInSection }}
+  <a class="next btn btn--secondary" href="{{.Permalink}}">
+    {{.Title}} <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
+  </a>
+  {{ end }}
+</div>
