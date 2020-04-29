@@ -34,11 +34,15 @@ so that the perspectives (content, technical, business) remain diverse.
 The output of the Design Sprints are often physical pieces of butcher paper or
 the like which will have little sketches all saying the same thing after the amalgamation of everyones ideas. From here we're ready to bring these ideas to life.
 
+{{% well title="Looking for Design Sprint training?" body="We can help facilitate or train you or your team on how to run your own Design Sprints. This can be done in your office, our office or even remotely." linkText="Learn more" linkUrl="/" %}}
+
 ## Protyping / UI Design
 
 Using the sketches from the Design Studio we now start turning the ideas on
 paper into workflows and interfaces within the web browser. You don't get any
 higher fidelity design than you do in it's final form :sunglasses:
+
+{{% figure imgUrl="/prototype.png" caption="Creating in the browser makes for resilient designs, guaranteed to work on our devices." %}}
 
 As we are testing while we go, we weed out any obvious issues with the sketches
 once they are translated to the browser. Once we have a working
@@ -54,6 +58,8 @@ If we are designing a brand new product we like to get the prototypes in front
 of the target market as soon as possible to make sure the product fits.
 Otherwise, if this is an existing product but perhaps a new feature, then there
 is opportunities for A/B testing with their existing customer base.
+
+{{% figure imgUrl="/user-testing.jpeg" caption="Guerilla-style User Testing generally exposes any glaring user experience issues quickly" %}}
 
 If none of the above, we continue to test the product internally and with any
 relevant stakeholders to prove that our designs work. We repeat the design and
