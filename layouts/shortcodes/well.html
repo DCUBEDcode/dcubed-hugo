@@ -9,5 +9,7 @@
     <h3 class="well__title pressed">{{ .Get "title" }}</h3>
     <p>{{ .Get "body" }}</p>
   </div>
-  <a class="btn" href='{{ .Get "linkUrl" }}'>Book now</a>
+  {{ if .Get "linkUrl" }}
+    <a class="btn" href='{{ .Get "linkUrl" }}'>Book now</a>
+  {{ end }}
 </div>

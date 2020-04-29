@@ -4,21 +4,12 @@
   
   <url>
     <loc>http://dcubed.com.au/</loc>
-    <lastmod>2020-04-23T16:31:02+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dcubed.com.au/development/</loc>
-    <lastmod>2020-04-23T16:31:02+10:00</lastmod>
+    <lastmod>2020-04-23T16:30:14+10:00</lastmod>
   </url>
   
   <url>
     <loc>http://dcubed.com.au/design/</loc>
     <lastmod>2020-04-23T16:30:14+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dcubed.com.au/about/</loc>
   </url>
   
   <url>
@@ -43,6 +34,10 @@
   
   <url>
     <loc>http://dcubed.com.au/blog/prototyping-with-real-data/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dcubed.com.au/development/</loc>
   </url>
   
   <url>
