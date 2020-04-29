@@ -4,6 +4,7 @@ intro: "We have always been and most likely always will be, lovers of the web.
 Everything it stands for speed, scalability and accessibility make it the
 perfect platform to continue building for."
 date: 2020-04-23T16:31:02+10:00
+layout: single
 draft: false
 ---
 

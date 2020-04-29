@@ -21,7 +21,7 @@ Sketch files we have.
 
 Our 'typical' design process would like something like this.
 
-## Design Sprints
+## Step 1: Design Sprints
 
 We run many variations of Design Sprints which focus on rapid concept
 generation, critique and collectively commit to an idea. These can run anywhere
@@ -36,7 +36,7 @@ the like which will have little sketches all saying the same thing after the ama
 
 {{% well title="Looking for Design Sprint training?" body="We can help facilitate or train you or your team on how to run your own Design Sprints. This can be done in your office, our office or even remotely." linkText="Learn more" linkUrl="/" %}}
 
-## Protyping / UI Design
+## Step 2: Protyping / UI Design
 
 Using the sketches from the Design Studio we now start turning the ideas on
 paper into workflows and interfaces within the web browser. You don't get any
@@ -49,7 +49,7 @@ once they are translated to the browser. Once we have a working
 prototype it's now on to testing internally or externally depending on how
 brave you are.
 
-## User testing
+## Step 3: User testing
 
 User testing comes in many different flavours, the approach taken ultimately
 comes down to budget and the maturity of the product.
@@ -65,7 +65,7 @@ If none of the above, we continue to test the product internally and with any
 relevant stakeholders to prove that our designs work. We repeat the design and
 test process until we think we've got it right.
 
-## Development and polish
+## Step 4: Development and polish
 
 After the design figures itself out, we can now commit to writing any backend
 code needed to power the app as well as polish off any parts of the design that
