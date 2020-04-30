@@ -34,7 +34,7 @@ so that the perspectives (content, technical, business) remain diverse.
 The output of the Design Sprints are often physical pieces of butcher paper or
 the like which will have little sketches all saying the same thing after the amalgamation of everyones ideas. From here we're ready to bring these ideas to life.
 
-{{% well title="Looking for Design Sprint training?" body="We can help facilitate or train you or your team on how to run your own Design Sprints. This can be done in your office, our office or even remotely." linkText="Learn more" linkUrl="/" %}}
+{{% well title="Looking for Design Sprint training?" body="We can help facilitate or train you or your team on how to run your own Design Sprints. This can be done in your office, our office or even remotely." linkText="Learn more" linkUrl="#contact" %}}
 
 ## Step 2: Protyping / UI Design
 
