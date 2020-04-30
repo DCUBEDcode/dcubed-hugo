@@ -19,7 +19,7 @@ rather than later. Now we can play with the design on our mobiles, ipads, or
 laptops and reveal any roadbumps that don't play out in the perfect Figma or
 Sketch files we have.
 
-Our 'typical' design process would like something like this.
+**Our 'typical' design process would like something like this:**
 
 ## Step 1: Design Sprints
 
@@ -70,3 +70,10 @@ test process until we think we've got it right.
 After the design figures itself out, we can now commit to writing any backend
 code needed to power the app as well as polish off any parts of the design that
 need love.
+
+<div class="post-pagination">
+  <a class="previous btn btn--secondary" href="/development">
+    Development at DCUBED
+    <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
+  </a>
+</div>
