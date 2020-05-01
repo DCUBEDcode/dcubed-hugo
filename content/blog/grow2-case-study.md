@@ -85,3 +85,5 @@ All progress is reported back to the Trainer in real time and added to their Stu
 </div>
 </div>
 </div>
+
+{{% well title="Like what you se?" body="Get in touch to see how DCUBED can help bring innovation to your business." linkText="Get in touch" linkUrl="#contact" %}}
