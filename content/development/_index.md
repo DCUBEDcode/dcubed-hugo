@@ -1,6 +1,6 @@
 ---
 title: "Development at DCUBED"
-intro: "We always have been and most likely always will be, lovers of the web.
+description: "We always have been and most likely always will be, lovers of the web.
 Everything it stands for speed, scalability and accessibility make it the
 perfect platform to continue building for."
 draft: false
@@ -51,7 +51,7 @@ We specialise in creating websites that take advantage of more advanced features
 account systems, email notifications, Stripe integration and payment gateways, file upload which take
 advantage of Amazon Web Services such as S3.
 
-{{% figure imgUrl="/finx-responsive.png" caption="Finance X required a website to capture enquiries on desktop and mobile. No problem." %}}
+{{% figure src="/finx-responsive.png" caption="Finance X required a website to capture enquiries on desktop and mobile. No problem." %}}
 
 ## Search Engine Optimisation (SEO)
 

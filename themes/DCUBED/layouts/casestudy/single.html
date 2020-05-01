@@ -1,0 +1,57 @@
+{{ define "header" }}
+  {{- partial "slim-header.html" . -}}
+{{ end }}
+{{ define "main" }}
+<div class="post-wrap">
+  <div class="container">
+    <h1 id="title" class="post-title">{{ .Title }}</h1>
+    <aside class="post-meta double">
+      <p id="date" class="flat">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
+      <span class="desktop-only">| </span>
+      <p id="wordcount" class="flat"> {{ .ReadingTime }} minute read</p>
+    </aside>
+    {{ if .Params.heroLargeUrl }}
+      <div class="double">
+        <img src="{{ .Params.heroLargeUrl }}" alt="" />
+      </div>
+    {{ end }}
+    {{ if .Description }}
+      <p class="h3 double">{{ .Description }}</p>
+    {{ end }}
+    {{ if .Params.deliverables }}
+      <h2 class="double">Deliverables</h2>
+      <ul class="deliverables">
+        {{ range .Params.deliverables }}
+          <li><i class="fal fa-{{ .icon }}"></i>{{ .text }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+    <article id="content">
+      {{ if .Params.intro }}
+        <p class="h3 double">{{ .Params.intro }}</p>
+      {{ end }}
+      {{ .Content }}
+    </article>
+    <aside id="meta">
+      <div>
+        {{ with .Params.topics }}
+        <ul id="topics">
+          {{ range . }}
+            <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ with .Params.tags }}
+        <ul id="tags">
+          {{ range . }}
+          <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{- partial "pagination.html" . -}}
+    </aside>
+  </div>
+</div>
+{{- partial "recent-posts.html" . -}}
+{{ end }}

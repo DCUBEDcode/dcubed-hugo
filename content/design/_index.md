@@ -1,6 +1,6 @@
 ---
 title: "Design at DCUBED"
-intro: "Design is the difference between good and great. DCUBED relies
+description: "Design is the difference between good and great. DCUBED relies
 on decades of learnings from building products to create memorable
 experiences."
 date: 2020-04-23T16:30:14+10:00
@@ -29,7 +29,7 @@ between 2-5 days and generally depend on atleast 3 people from both DCUBED and
 the client. Preferrably the partipants should come from different disciplines
 so that the perspectives (content, technical, business) remain diverse.
 
-{{% figure imgUrl="/design-sprint.jpeg" caption="Participants sketch out user workflows in quick succession" %}}
+{{% figure src="/design-sprint.jpeg" caption="Participants sketch out user workflows in quick succession" %}}
 
 The output of the Design Sprints are often physical pieces of butcher paper or
 the like which will have little sketches all saying the same thing after the amalgamation of everyones ideas. From here we're ready to bring these ideas to life.
@@ -42,7 +42,7 @@ Using the sketches from the Design Studio we now start turning the ideas on
 paper into workflows and interfaces within the web browser. You don't get any
 higher fidelity design than you do in it's final form :sunglasses:
 
-{{% figure imgUrl="/prototype.png" caption="Creating in the browser makes for resilient designs, guaranteed to work on our devices." %}}
+{{% figure src="/prototype.png" caption="Creating in the browser makes for resilient designs, guaranteed to work on our devices." %}}
 
 As we are testing while we go, we weed out any obvious issues with the sketches
 once they are translated to the browser. Once we have a working
@@ -59,7 +59,7 @@ of the target market as soon as possible to make sure the product fits.
 Otherwise, if this is an existing product but perhaps a new feature, then there
 is opportunities for A/B testing with their existing customer base.
 
-{{% figure imgUrl="/user-testing.jpeg" caption="Guerilla-style User Testing generally exposes any glaring user experience issues quickly" %}}
+{{% figure src="/user-testing.jpeg" caption="Guerilla-style User Testing generally exposes any glaring user experience issues quickly" %}}
 
 If none of the above, we continue to test the product internally and with any
 relevant stakeholders to prove that our designs work. We repeat the design and

@@ -1,6 +1,6 @@
 ---
 title: 'Create smoother animations with animation-fill-mode'
-intro: "Supercharge your animations by taking control of your animated elements, before and after they run their animations."
+description: "Supercharge your animations by taking control of your animated elements, before and after they run their animations."
 heroSmallUrl: '/post-header-fill-small.png'
 heroLargeUrl: '/post-header-fill-large@2x.png'
 draft: false
@@ -45,7 +45,6 @@ Let's say we want to create a list of elements which will fade in each item one 
   </ul>
 {{< / highlight >}}
 
-### CSS
 {{< highlight go >}}
   .animated-list li {
     animation: fadeIn 375ms ease;
