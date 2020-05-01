@@ -1,6 +1,6 @@
 ---
 title: 'Grow2 - Case Study'
-description: 'Grow2 is an organisation hell bent on getting effective training to people in what ever which way they prefer to learn. This meant that we needed to cater for high quality audio and video as well as content with supporting images topped off with a quiz.'
+description: 'Grow2 is an education startup based in Brisbane, Australia who have created a training platform for sporting clubs and their committees. They ensure everyone can receive training in which ever format that prefer - whether that is through text, imagery, audio or video.'
 heroSmallUrl: '/post-header-grow2-small.png'
 heroLargeUrl: '/post-header-grow2-large@2x.png'
 siteUrl: https://www.grow2.com.au
@@ -20,16 +20,11 @@ deliverables:
     icon: mobile
 ---
 
-
-## What is Grow2?
-
-Grow2 is an education startup based in Brisbane, Australia who focus on creating a training platform for sporting clubs and their committees. They are currently rolling out to sporting clubs across Brisbane.
-
 ## Requirements
 
 Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.
 
-The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way. Some people preferred reading content, some prefer a video, others enjoy listening to audio.
+The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way. Some people preferred reading content, some prefer a video, others enjoy listening to audio. This meant we would need to take advantage of cloud hosting using Amazon AWS S3.
 
 ## Trainer Application
 

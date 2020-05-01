@@ -25,9 +25,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dcubed.com.au/blog/grow2-case-study/</guid>
-      <description>What is Grow2? Grow2 is an education startup based in Brisbane, Australia who focus on creating a training platform for sporting clubs and their committees. They are currently rolling out to sporting clubs across Brisbane.
-Requirements Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.
-The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way.</description>
+      <description>Requirements Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.
+The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way. Some people preferred reading content, some prefer a video, others enjoy listening to audio. This meant we would need to take advantage of cloud hosting using Amazon AWS S3.</description>
     </item>
     
   </channel>

@@ -13,8 +13,10 @@
               <p>{{ .Description }}</p>
               <h3>What we did</h3>
               <ul class="double">
-                {{ range .Params.services }}
-                <li>{{ . }}</li>
+                {{ range .Params.deliverables }}
+                <li>
+                  {{ .text }}
+                </li>
                 {{ end }}
               </ul>
               <a href="{{ .Permalink }}" class="btn btn--secondary casestudy__btn">See Case Study</a>
