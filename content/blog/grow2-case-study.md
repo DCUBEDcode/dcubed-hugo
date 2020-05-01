@@ -3,6 +3,7 @@ title: 'Grow2 - Case Study'
 description: 'Grow2 is an organisation hell bent on getting effective training to people in what ever which way they prefer to learn. This meant that we needed to cater for high quality audio and video as well as content with supporting images topped off with a quiz.'
 heroSmallUrl: '/post-header-grow2-small.png'
 heroLargeUrl: '/post-header-grow2-large@2x.png'
+siteUrl: https://www.grow2.com.au
 draft: false
 type: casestudy
 layout: single

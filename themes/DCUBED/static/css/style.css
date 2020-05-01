@@ -1344,6 +1344,12 @@ h3,
     font-size: 1.5rem;
   }
 
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
