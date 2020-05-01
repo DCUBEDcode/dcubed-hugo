@@ -17,7 +17,11 @@ deliverables:
     icon: tape
   - text: Responsive Website
     icon: phone-laptop
+  - text: Analytics
+    icon: analytics
 ---
+
+## Requirements
 
 FinX is a finance solutions company that offers financial services to customers looking to purchase vehicles, equipment, marine, caravans and other commercial goods.
 

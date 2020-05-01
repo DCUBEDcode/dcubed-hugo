@@ -12,7 +12,7 @@
               <h2>{{ .Title }}</h2>
               <p class="double">{{ .Description }}</p>
               <h3>What we did</h3>
-              <ul class="double unstyled">
+              <ul class="unstyled">
                 {{ range .Params.deliverables }}
                   <li><i class="fal fa-{{ .icon }} deliver-icon"></i>{{ .text }}</li>
                 {{ end }}
@@ -32,6 +32,7 @@
             <h2>We use rapid prototyping</h2>
             <p>What you won’t find us doing is spending weeks perfecting high quality design mocks. Making such serious investment and commitment to a design so early on is a flawed way to work.</p>
             <p>Instead, expect from us enough visual documentation to help convey an idea. Once we all feel like it’s the right choice. We start bringing the idea to life with code.</p>
+            <p><a href="/design" class="btn btn--link">See how we design at DCUBED</a></p>
           </div>
         </div>
         <div class="how-we-work how-we-work--grow">

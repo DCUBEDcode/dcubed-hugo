@@ -1420,7 +1420,6 @@ h3,
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 48px;
-    margin-bottom: 48px;
   }
 
   .casestudy__image {
