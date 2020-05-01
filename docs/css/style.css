@@ -1215,6 +1215,23 @@ h3,
   line-height: 1.2;
 }
 
+.post-hero {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 42.8571%;
+  position: relative;
+  background: #192e4b;
+}
+
+.post-hero__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .post-pagination {
   padding-top: 2rem;
   margin-top: 2rem;

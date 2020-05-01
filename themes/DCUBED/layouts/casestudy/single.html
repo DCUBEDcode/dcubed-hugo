@@ -14,8 +14,10 @@
       <p id="wordcount" class="flat"> {{ .ReadingTime }} minute read</p>
     </aside>
     {{ if .Params.heroLargeUrl }}
-      <div class="double">
-        <img src="{{ .Params.heroLargeUrl }}" alt="" />
+    <div class="double post-hero post-hero--{{ .Params.heroClass }}">
+        <div class="post-hero__content">
+          <img src="{{ .Params.heroLargeUrl }}" alt="" />
+        </div>
       </div>
     {{ end }}
     {{ if .Description }}

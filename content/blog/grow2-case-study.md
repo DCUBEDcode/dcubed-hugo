@@ -4,6 +4,7 @@ description: 'Grow2 is an education startup based in Brisbane, Australia who hav
 heroTall: '/case-header-grow2.png'
 heroSmallUrl: '/post-header-grow2-small.png'
 heroLargeUrl: '/post-header-grow2-large@2x.png'
+heroClass: grow2
 siteUrl: https://www.grow2.com.au
 draft: false
 type: casestudy

@@ -5,6 +5,7 @@ draft: false
 heroTall: '/case-header-finx.png'
 heroSmallUrl: '/post-header-finx-small.png'
 heroLargeUrl: '/post-header-finx-large.png'
+heroClass: finx
 type: casestudy
 layout: single
 siteUrl: https://www.fin-x.com.au
