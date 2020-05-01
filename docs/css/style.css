@@ -1264,6 +1264,14 @@ h3,
   margin-bottom: 3rem;
 }
 
+.deliver-icon {
+  width: 3rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
 .deliverables li {
   margin-bottom: 1rem;
   display: flex;
@@ -1420,7 +1428,7 @@ h3,
   }
 
   .casestudy__copy ul {
-    width: 66%;
+    width: 85%;
     column-count: 2;
   }
 

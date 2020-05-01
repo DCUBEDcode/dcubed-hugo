@@ -6,17 +6,15 @@
         {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
 			  {{ range ($casestudy.Pages) }}
           <div class="casestudy">
-            <div class="casestudy__image casestudy__image--grow">
+            <div class="casestudy__image" style='background-image: url({{ .Params.heroTall }})'>
             </div>
             <div class="casestudy__copy">
               <h2>{{ .Title }}</h2>
-              <p>{{ .Description }}</p>
+              <p class="double">{{ .Description }}</p>
               <h3>What we did</h3>
-              <ul class="double">
+              <ul class="double unstyled">
                 {{ range .Params.deliverables }}
-                <li>
-                  {{ .text }}
-                </li>
+                  <li><i class="fal fa-{{ .icon }} deliver-icon"></i>{{ .text }}</li>
                 {{ end }}
               </ul>
               <a href="{{ .Permalink }}" class="btn btn--secondary casestudy__btn">See Case Study</a>

@@ -1,6 +1,7 @@
 ---
 title: 'Grow2 - Case Study'
 description: 'Grow2 is an education startup based in Brisbane, Australia who have created a training platform for sporting clubs and their committees. They ensure everyone can receive training in which ever format that prefer - whether that is through text, imagery, audio or video.'
+heroTall: '/case-header-grow2.png'
 heroSmallUrl: '/post-header-grow2-small.png'
 heroLargeUrl: '/post-header-grow2-large@2x.png'
 siteUrl: https://www.grow2.com.au
