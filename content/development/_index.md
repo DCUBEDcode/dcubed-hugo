@@ -51,7 +51,12 @@ We specialise in creating websites that take advantage of more advanced features
 account systems, email notifications, Stripe integration and payment gateways, file upload which take
 advantage of Amazon Web Services such as S3.
 
-{{% figure src="/finx-responsive.png" caption="Finance X required a website to capture enquiries on desktop and mobile. No problem." %}}
+<div class="finx-responsive desktop-only">
+{{% browser-mockup src="/casestudy/finx/finx-desktop.png" %}}
+
+{{% phone-mockup src="/casestudy/finx/finx-mobile.png" %}}
+</div>
+
 
 ## Search Engine Optimisation (SEO)
 

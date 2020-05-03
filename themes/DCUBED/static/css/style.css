@@ -542,7 +542,7 @@ h3,
 h4 {
   line-height: 1.25;
   font-family: 'Roboto';
-  font-weight: 900;
+  font-weight: 800;
   color: #060d1b;
 }
 
@@ -654,7 +654,7 @@ h3,
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Raleway';
-  font-weight: 900;
+  font-weight: 800;
   color: #fff;
   text-align: center;
   letter-spacing: 2px;
@@ -1355,6 +1355,23 @@ h3,
 
 @media(min-width: 768px) {
 
+
+  .finx-responsive {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -50px;
+  }
+
+  .finx-responsive .browser-mockup {
+    position: absolute;
+  }
+
+  .finx-responsive .iphone {
+    margin-right: -120px;
+    margin-top: -75px;
+  }
+
   h1 {
     font-size: 3rem;
   }
@@ -1519,7 +1536,7 @@ h3,
   }
 
   .desktop-only {
-    display: block;
+    display: flex;
   }
 
   .huge {
