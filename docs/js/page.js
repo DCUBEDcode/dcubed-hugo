@@ -14,7 +14,6 @@ function isAnyPartOfElementInViewport(el) {
 
 document.addEventListener( 'DOMContentLoaded', () => {
   const grow2 = document.getElementById('grow2');
-  const more = document.getElementById('header-more');
   const finxLogo = document.getElementById('finx-logo');
 
   const cta = document.getElementById('cta');
@@ -68,9 +67,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const handleScroll = () => raf( () => {
     if(grow2 && isAnyPartOfElementInViewport(grow2)) {
       grow2.classList.add('grow2--active');
-      more.classList.add('header__more--hidden');
-    } else {
-      more.classList.remove('header__more--hidden');
     }
 
     if(finxLogo && isAnyPartOfElementInViewport(finxLogo)) {

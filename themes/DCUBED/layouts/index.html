@@ -1,29 +1,31 @@
 {{ define "main" }}
+  <div class="casestudys">
+    <h1 class="section-title casestudys__title light-title">Featured work</h1>
+    <section class="section casestudys__wrap">
+      {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
+      {{ range ($casestudy.Pages) }}
+        <div class="casestudy">
+          <div class="casestudy__image" style='background-image: url({{ .Params.heroTall }})'>
+          </div>
+          <div class="casestudy__copy">
+            <h2>{{ .Title }}</h2>
+            <p class="double">{{ .Description }}</p>
+            <h3>What we did</h3>
+            <ul class="unstyled">
+              {{ range .Params.deliverables }}
+                <li><i class="fal fa-{{ .icon }} deliver-icon"></i>{{ .text }}</li>
+              {{ end }}
+            </ul>
+            <a href="{{ .Permalink }}" class="btn btn--secondary casestudy__btn">See Case Study</a>
+          </div>
+        </div>
+      {{ end }}
+    </section>
+  </div>
   <div class="main">
     <div class="container">
-      <section class="section">
-        <h1 class="section-title double">What we've worked on</h1>
-        {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
-			  {{ range ($casestudy.Pages) }}
-          <div class="casestudy">
-            <div class="casestudy__image" style='background-image: url({{ .Params.heroTall }})'>
-            </div>
-            <div class="casestudy__copy">
-              <h2>{{ .Title }}</h2>
-              <p class="double">{{ .Description }}</p>
-              <h3>What we did</h3>
-              <ul class="unstyled">
-                {{ range .Params.deliverables }}
-                  <li><i class="fal fa-{{ .icon }} deliver-icon"></i>{{ .text }}</li>
-                {{ end }}
-              </ul>
-              <a href="{{ .Permalink }}" class="btn btn--secondary casestudy__btn">See Case Study</a>
-            </div>
-          </div>
-        {{ end }}
-      </section>
       <section class="section" id="what-we-do">
-        <h1 class="section-title double">How we work</h1>
+        <h1 class="section-title">How we work</h1>
         <div class="how-we-work">
           <div class="how-we-work__img" id="proto-image">
             <img src="user.svg" alt="">
@@ -32,7 +34,7 @@
             <h2>We use rapid prototyping</h2>
             <p>What you won’t find us doing is spending weeks perfecting high quality design mocks. Making such serious investment and commitment to a design so early on is a flawed way to work.</p>
             <p>Instead, expect from us enough visual documentation to help convey an idea. Once we all feel like it’s the right choice. We start bringing the idea to life with code.</p>
-            <p><a href="/design" class="btn btn--link">See how we design at DCUBED <i class="fal fa-chevron-right" style="margin-left: 1rem"></i><i class="fal fa-chevron-right"></i></a></p>
+            <p><a href="/design" class="btn btn--link">How we design at DCUBED <i class="fal fa-chevron-right" style="margin-left: 1rem"></i><i class="fal fa-chevron-right"></i></a></p>
           </div>
         </div>
         <div class="how-we-work how-we-work--grow">
@@ -42,7 +44,7 @@
           <div>
             <h2>We ship fast, and ship often.</h2>
             <p>Using platforms like Heroku, we are able to create and host any kind of app in seconds.</p><p>Not only does this automated deployment process save time (money), it means you get a publically accessible link to your application upon kick off. You can now test and share with your own team, whenever we push a release.</p>
-            <p><a href="/development" class="btn btn--link">See how we develop at DCUBED <i class="fal fa-chevron-right" style="margin-left: 1rem"></i><i class="fal fa-chevron-right"></i></a></p>
+            <p><a href="/development" class="btn btn--link">How we develop at DCUBED <i class="fal fa-chevron-right" style="margin-left: 1rem"></i><i class="fal fa-chevron-right"></i></a></p>
           </div>
         </div>
         <div class="how-we-work how-we-work--communicate">

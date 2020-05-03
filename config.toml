@@ -1,6 +1,7 @@
 baseURL = "http://dcubed.com.au/"
 languageCode = "en-us"
 title = "DCUBED | Dream. Design. Develop | Brisbane Web Design"
+slogan = "Dream. Design. Develop."
 intro = ""
 theme = "DCUBED"
 publishDir = "docs"

@@ -14,6 +14,7 @@ body {
   color: #333;
   font-size: 1.15rem;
   font-family: 'Roboto';
+  font-weight: 300;
 }
 
 .small {
@@ -285,7 +286,7 @@ pre code {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .container--small {
@@ -304,7 +305,6 @@ pre code {
 .header {
   display: flex;
   padding: 1rem;
-  margin-bottom: 2rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -565,13 +565,9 @@ h3,
   color: #fff;
 }
 
-.section {
-  padding: 4rem 0;
-}
-
 .main {
-  opacity: 0;
-  animation: fadeIn 500ms 1500ms ease forwards;
+  padding: 4rem 0;
+  background: #f9f9f9;
 }
 
 .section + .section {
@@ -582,13 +578,13 @@ h3,
   text-align: center;
 }
 
+.casestudys {
+  padding: 2rem;
+}
+
 .casestudy {
   display: flex;
   flex-direction: column;
-}
-
-.casestudy + .casestudy {
-  margin-top: 4rem;
 }
 
 .casestudy__review {
@@ -601,9 +597,10 @@ h3,
 
 .casestudy__image {
   background-size: cover;
+  background-position: center;
   position: relative;
-  height: 400px;
   margin-bottom: 2rem;
+  padding-bottom: 56.25%;
 }
 
 .casestudy__btn {
@@ -623,7 +620,7 @@ h3,
 }
 
 .intro__subtitle {
-  font-weight: 400;
+  font-weight: 300;
   opacity: 0.75;
   margin-bottom: 3rem;
   font-family: 'Roboto';
@@ -1086,13 +1083,18 @@ h3,
   overflow: hidden;
 }
 
+.how-we-work :last-child {
+  margin-bottom: 0;
+}
+
 .how-we-work + .how-we-work {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .how-we-work__img {
   text-align: center;
   margin-bottom: 40px;
+  display: none;
 }
 
 .footer {
@@ -1110,12 +1112,13 @@ h3,
 }
 
 .form {
-  padding: 2rem;
+  padding: 1.5rem;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
   color: #333;
   font-size: 1.25rem;
+  margin: 0 -1.5rem;
 }
 
 .form__group {
@@ -1176,7 +1179,7 @@ h3,
 
 .recent-posts {
   background: #f2f2f2;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .post {
@@ -1324,7 +1327,12 @@ h3,
   white-space: normal;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
+
+
+  .casestudy + .casestudy {
+    margin-top: 4rem;
+  }
 
   .mobile-double {
     margin-bottom: 2rem !important;
@@ -1337,14 +1345,16 @@ h3,
   .posts {
     white-space: nowrap;
     overflow-x: auto;
-    margin: 0 -1rem;
-    padding: 0 1rem 2rem;
+    margin: 0 -2rem;
+    padding: 0 2rem 2rem;
   }
 
   .post {
     display: inline-block;
     width: 90%;
     white-space: normal;
+    vertical-align: top;
+    margin: 0;
   }
 
   .post__body {
@@ -1396,6 +1406,8 @@ h3,
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .posts-list {
@@ -1432,6 +1444,7 @@ h3,
   }
 
   .how-we-work__img {
+    display: block;
     margin-bottom: 0;
   }
 
@@ -1449,19 +1462,11 @@ h3,
     padding-left: 80px;
   }
 
-
-  .casestudy {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 48px;
-  }
-
   .casestudy__image {
-    height: 500px;
+    background-position: center;
   }
 
   .casestudy__copy ul {
-    width: 85%;
     column-count: 2;
   }
 
@@ -1492,6 +1497,33 @@ h3,
 }
 
 @media(min-width: 960px) {
+
+  .casestudys {
+    border-top: 1px solid #162233;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.2);
+    background: #090a11;
+    color: #aaa;
+    padding: 4rem;
+  }
+
+  .casestudys__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .casestudys h1,
+  .casestudys h2,
+  .casestudys h3,
+  .casestudys .btn {
+    color: #fff;
+  }
+
+  .casestudys__title {
+    opacity: 0.5;
+    font-weight: 300;
+    font-family: 'roboto';
+  }
 
   .pillars {
     display: flex;
@@ -1545,10 +1577,7 @@ h3,
 
   .form {
     padding: 3rem;
-  }
-
-  .dcubed-wrap {
-    transform: scale(0.75);
+    margin: 0;
   }
 
   .intro {
@@ -1558,11 +1587,7 @@ h3,
   }
 
   .header {
-    min-height: 95vh;
-  }
-
-  .header__logo {
-    margin-bottom: 3rem;
+    min-height: 97vh;
   }
 
   .header__footer {
@@ -1625,25 +1650,12 @@ h3,
     display: none;
   }
 
-  .header__wrap {
-    transform: translateY(154px);
-  }
-
   .grow2__logo {
     display: block;
   }
 
-  @keyframes slideUpWrap {
-    from {
-      transform: translateY(154px);
-    }
-    to {
-      transform: translateY(-57px);
-    }
-  }
-
   .recent-posts {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
   }
 
 
@@ -1666,11 +1678,40 @@ h3,
 
 @media(min-width: 1600px) {
 
+  .header {
+    min-height: 60vh;
+  }
+
+  .dcubed-wrap {
+    transform: scale(0.75);
+  }
+
   .phones__list {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .casestudys__title {
+    margin-bottom: 3rem;
+  }
+
+  .casestudys h1,
+  .casestudys h2,
+  .casestudys h3,
+  .casestudys .btn {
+    color: #fff;
+  }
+
+  .casestudys__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    padding: 0 4rem;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
 }
 
 .visited .dcubed__cube,
