@@ -325,6 +325,7 @@ pre code {
 
   position: relative;
   overflow: hidden;
+  min-height: 97vh;
 }
 
 .header__bg {
@@ -464,6 +465,10 @@ pre code {
   user-select: none;
 }
 
+.header--slim {
+  min-height: 0;
+}
+
 .header--slim .header__wrap {
   transform: none;
   animation: none;
@@ -600,7 +605,7 @@ h3,
 }
 
 .main {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background: #f9f9f9;
 }
 
@@ -1259,7 +1264,7 @@ h3,
 
 .post-wrap {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .post-title {
@@ -1377,6 +1382,15 @@ h3,
 
 @media(max-width: 767px) {
 
+
+  .post-pagination {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-pagination a + a {
+    margin-top: 1rem;
+  }
 
   .casestudy + .casestudy {
     margin-top: 4rem;
@@ -1567,6 +1581,7 @@ h3,
   }
 
   .casestudys__title {
+    color: #fff;
     opacity: 0.5;
     font-weight: 300;
     font-family: 'roboto';
@@ -1629,10 +1644,6 @@ h3,
 
   .intro {
     text-align: center;
-  }
-
-  .header {
-    min-height: 97vh;
   }
 
   .header__footer {

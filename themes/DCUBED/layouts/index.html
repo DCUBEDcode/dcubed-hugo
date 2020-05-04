@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="casestudys">
     <div class="casestudys__bg">
-      <h1 class="section-title casestudys__title light-title">Featured work</h1>
+      <h1 class="section-title casestudys__title">Featured work</h1>
       <section class="section casestudys__wrap">
         {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
         {{ range ($casestudy.Pages) }}
@@ -27,7 +27,7 @@
   <div class="main">
     <div class="container">
       <section class="section" id="what-we-do">
-        <h1 class="section-title">How we work</h1>
+        <h1 class="section-title double">How we work</h1>
         <div class="how-we-work">
           <div class="how-we-work__img" id="proto-image">
             <img src="user.svg" alt="">
@@ -49,24 +49,26 @@
             <p><a href="/development" class="btn btn--link">How we develop at DCUBED <i class="fal fa-chevron-right" style="margin-left: 1rem"></i><i class="fal fa-chevron-right"></i></a></p>
           </div>
         </div>
-        <div class="how-we-work how-we-work--communicate">
-          <div class="how-we-work__img" id="trello-image">
-            <img src="tools.png" alt="">
+        <div class="desktop-only">
+          <div class="how-we-work how-we-work--communicate">
+            <div class="how-we-work__img" id="trello-image">
+              <img src="tools.png" alt="">
+            </div>
+            <div>
+              <h2>Get amongst it (or don't)</h2>
+              <p>We create an environment of transparency and sharing so that you can see as much or as little as you want about the progress of your application.</p>
+              <p>Upon kick-off you will receive an invite to your projects channel in the communication app Slack. In here you will see all ‘commits’ made to the code repository, the moderation of the Trello project board and any commentary made by the development team.</p>
+            </div>
           </div>
-          <div>
-            <h2>Get amongst it (or don't)</h2>
-            <p>We create an environment of transparency and sharing so that you can see as much or as little as you want about the progress of your application.</p>
-            <p>Upon kick-off you will receive an invite to your projects channel in the communication app Slack. In here you will see all ‘commits’ made to the code repository, the moderation of the Trello project board and any commentary made by the development team.</p>
-          </div>
-        </div>
-        <div class="how-we-work how-we-work--grow" id="insight-image">
-          <div class="how-we-work__img">
-            <img src="lab.svg" alt="" style="width: 240px">
-          </div>
-          <div>
-            <h2>Give insight for future opportunity</h2>
-            <p>During project kick offs, we help determine the goals of your product. It's very important that once users start using your software, you are able to understand exactly how they are using it.</p>
-            <p>With our measurements in place, the learnings can shape any future decisions you make. You will continue to get engagement reports as long as you choose. </p>
+          <div class="how-we-work how-we-work--grow" id="insight-image">
+            <div class="how-we-work__img">
+              <img src="lab.svg" alt="" style="width: 240px">
+            </div>
+            <div>
+              <h2>Give insight for future opportunity</h2>
+              <p>During project kick offs, we help determine the goals of your product. It's very important that once users start using your software, you are able to understand exactly how they are using it.</p>
+              <p>With our measurements in place, the learnings can shape any future decisions you make. You will continue to get engagement reports as long as you choose. </p>
+            </div>
           </div>
         </div>
       </section>
