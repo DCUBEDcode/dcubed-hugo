@@ -96,6 +96,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
     window.addEventListener( 'scroll', handleScroll )
   }
 
+  setTimeout(() => {
+    document.querySelector('.header--solid').classList.remove('header--solid');
+  }, 1500)
+
 
 } )
 

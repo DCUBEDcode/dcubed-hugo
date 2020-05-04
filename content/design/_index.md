@@ -8,9 +8,7 @@ draft: false
 ---
 
 Design at DCUBED is done very different to how things typically play out at
-other agencies. We have figured out over the years that the quicker we learn
-about a design, the more success we have with it. And there is no way faster
-way to get your hands on a design than through code.
+other agencies. We have figured out over the years that the quicker we get our hands on a design, the sooner we find it's flaws (yes, even we have flaws). And there is no way faster way to get your hands on a design than through code.
 
 Our proficiency with CSS and other front end languages means that once we move
 past a "white board sesh", we're ready to start bringing our ideas to life.

@@ -27,6 +27,7 @@ body {
   position: relative;
 }
 
+ol + h2,
 p + h2 {
   margin-top: 2rem;
 }
@@ -40,8 +41,13 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   margin-left: 1em;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
 }
 
 .unstyled {
@@ -309,6 +315,7 @@ pre code {
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  transition: background 375ms ease;
 
   background: #282537;
   background-image: -webkit-radial-gradient(top, circle cover, #1f3b5d 0%, #0b0f1f 80%);
@@ -318,6 +325,17 @@ pre code {
 
   position: relative;
   overflow: hidden;
+}
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #13182f;
+  animation: fadeOut 375ms 1500ms ease forwards;
 }
 
 @keyframes slideUpWrap {
@@ -393,6 +411,8 @@ pre code {
 }
 
 .header__wrap {
+  position: relative;
+  z-index: 50;
   transform: translateY(77px);
   animation: slideUpWrap 375ms 1500ms ease forwards;
 }
@@ -401,6 +421,7 @@ pre code {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .header__footer {
@@ -469,6 +490,17 @@ pre code {
   }
 }
 
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes load {
   0% {
     opacity: 0;
@@ -524,11 +556,13 @@ pre code {
   margin-top: -1rem;
   text-align: center;
   opacity: 0;
-  animation: fadeIn 500ms 1500ms ease forwards;
+  transform: translateY(-30%);
+  animation: slideIn 375ms 1500ms ease forwards;
 }
 
 p,
 ul,
+ol,
 h1,
 h2,
 h3,
@@ -580,6 +614,11 @@ h3,
 
 .casestudys {
   padding: 2rem;
+}
+
+.casestudys__bg {
+  opacity: 0;
+  animation: fadeIn 375ms 2000ms ease forwards;
 }
 
 .casestudy {
@@ -676,6 +715,15 @@ h3,
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -1211,7 +1259,7 @@ h3,
 
 .post-wrap {
   min-height: 100vh;
-  padding-bottom: 4rem;
+  padding: 4rem 0;
 }
 
 .post-title {
@@ -1499,7 +1547,6 @@ h3,
 @media(min-width: 960px) {
 
   .casestudys {
-    border-top: 1px solid #162233;
     box-shadow: inset 0 10px 20px rgba(0,0,0,0.2);
     background: #090a11;
     color: #aaa;
@@ -1582,8 +1629,6 @@ h3,
 
   .intro {
     text-align: center;
-    opacity: 0;
-    animation: fadeIn 500ms 1500ms ease forwards;
   }
 
   .header {
@@ -1626,7 +1671,7 @@ h3,
   }
 
   .header--slim {
-    min-height: 0;
+    min-height: 0 !important;
     height: 6.75rem;
   }
 
@@ -1679,7 +1724,7 @@ h3,
 @media(min-width: 1600px) {
 
   .header {
-    min-height: 60vh;
+    min-height: 85vh;
   }
 
   .dcubed-wrap {

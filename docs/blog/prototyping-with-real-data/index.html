@@ -45,25 +45,23 @@
   <a class="header__nav-icon header__nav-icon--close toggle-nav">
     <i class="fas fa-times"></i>
   </a>
-  <div>
-    <a href="/design" class="header__nav-link">Design</a>
-    <a href="/development" class="header__nav-link">Development</a>
-    <a href="/blog" class="header__nav-link mobile-double">Blog</a>
-  </div>
+  <a href="/design" class="header__nav-link">Design</a>
+  <a href="/development" class="header__nav-link">Development</a>
+  <a href="/blog" class="header__nav-link mobile-double">Blog</a>
   <a href="#contact" class="btn btn--secondary btn--light close-nav">Get in touch</a>
 </nav>
 
 
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="post-title">Creating fool proof prototypes with production data</h1>
+    <h1 id="title" class="post-title">Creating a prototype app using production data</h1>
     <aside class="post-meta double">
       <p id="date" class="flat">Published Mon Jan 1, 0001 </p>
       <span class="desktop-only">| </span>
-      <p id="wordcount" class="flat"> 0 minute read</p>
+      <p id="wordcount" class="flat"> 3 minute read</p>
     </aside>
     
-      <p class="h3 double">Designers often live in best scenario land. This makes for pretty pictures but when engineers start putting things together it quickly falls apart.</p>
+      <p class="h3 double">Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.</p>
     
     
       <div class="double">
@@ -71,7 +69,38 @@
       </div>
     
     <article id="content">
-      
+      <h2 id="what-is-production-data">What is production data?</h2>
+<p>Production data is data that is either a clone or the direct source of data that is used to power your exisiting apps. Typically your apps will receive data from &ldquo;endpoints&rdquo; which have been designed to return particular data. For example, your currenty app  may call <code>yourapp.com/api/countries</code> to get a list of <code>Countries</code>.</p>
+<p>The key here is the connection the content being used to compose a designers mock and what we will end up showing to our users. Maintaining this connection means that what we deliver is consistent with what was proposed and user tested against.</p>
+<h3 id="benefits-of-using-production-data">Benefits of using production data</h3>
+<ol>
+<li>Designers are exposed to back end systems, if only endpoints of an API. They are aware of the limitations, which are important to designing realistic pieces given time constraints.</li>
+<li>Content gaps are exposed early by user testing.</li>
+<li>The transition from prototype code to production code is minimal meaning release time is considerably less.</li>
+</ol>
+<h2 id="two-things-you-need-to-make-this-happen">Two things you need to make this happen</h2>
+<p>Everybody will have a different production setup and I hope this article is more of a conversation starter than a tutorial. I will go through a high level overview of what a setup could look like.</p>
+<h3 id="1-modern-front-end-library-reactvue">1. Modern front end library (React/Vue)</h3>
+<p>If your production environment uses a modern front end library such as React/Vue, then use that in your prototyping app. If you are not blessed with a modern production front end then I would suggest switching to a modern library for your prototype app. You will be able to build things so much faster by using props and all the powerful templating patterns.</p>
+<p>The only down side is you won&rsquo;t have the ability to easily move code from prototype to production.</p>
+<p><em>Bonus points for having your organisations design system written in your favourite front end frame work</em></p>
+<h3 id="2-node-server">2. Node Server</h3>
+<p>Node is fast enough, easy enough, reliable enough to recommend using to create your prototyping app. You will use this app to compose your components into views and populate them with data from your production endpoints. In this app, you will define routes which map back to production APIs to give back the data your composed views need.</p>
+<p>The routes you define will be determined by your design. Say for example you work for a company that makes a Fantasy Football app and you want to display a uses profile. The engineers would most likely already have an endpoint that returns this kind of data, therefore you would create a route in your Node app to call this endpoint and return its data. Something like this:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  app.<span style="color:#50fa7b">get</span>(&#39;<span style="color:#ff79c6">/</span>profile<span style="color:#ff79c6">/</span>:user&#39;, (req, res) =&gt; {
+    <span style="color:#6272a4">// In here show how to call prod data
+</span><span style="color:#6272a4"></span>  })</code></pre></td></tr></table>
+</div>
+</div>
+<p>Now with that route defined, we can go to our browser and type <code>localhost:8080/profile/1</code> with <code>1</code> being the user id for the profile we want to look at. This will then call our server, get the data we want and populate our components. As long as we have styled our design how we want then we are now seeing exactly what you would see in production!</p>
+
     </article>
     <aside id="meta">
       <div>
@@ -115,16 +144,16 @@
           
           
           <div class="post__body">
-            <h4>Creating fool proof prototypes with production data</h4>
+            <h4>Creating a prototype app using production data</h4>
             <p>Mon, Jan 1, 0001</p>
           </div>
         </a>
     
         <a class="post" href="http://dcubed.com.au/blog/simple-ab-test-in-prototypes/">
           
-          
-            <div class="post__header" style="background-image: url(post-1.jpeg)">
+            <div class="post__header" style="background-image: url(/post-1.jpeg)">
             </div>
+          
           
           <div class="post__body">
             <h4>Simple way to A/B test in your prototypes</h4>

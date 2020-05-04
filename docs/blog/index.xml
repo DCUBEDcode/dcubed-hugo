@@ -22,12 +22,13 @@ Why is this so good? When you use animation-fill-mode: forward you can set the i
     </item>
     
     <item>
-      <title>Creating fool proof prototypes with production data</title>
+      <title>Creating a prototype app using production data</title>
       <link>http://dcubed.com.au/blog/prototyping-with-real-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dcubed.com.au/blog/prototyping-with-real-data/</guid>
-      <description></description>
+      <description>What is production data? Production data is data that is either a clone or the direct source of data that is used to power your exisiting apps. Typically your apps will receive data from &amp;ldquo;endpoints&amp;rdquo; which have been designed to return particular data. For example, your currenty app may call yourapp.com/api/countries to get a list of Countries.
+The key here is the connection the content being used to compose a designers mock and what we will end up showing to our users.</description>
     </item>
     
     <item>
