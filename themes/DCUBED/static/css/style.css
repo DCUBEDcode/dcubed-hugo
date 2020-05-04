@@ -1262,6 +1262,10 @@ h3,
   transform: translateY(-0.25rem);
 }
 
+.post-header {
+  margin-bottom: 1rem;
+}
+
 .post-wrap {
   min-height: 100vh;
   padding: 2rem 0;
