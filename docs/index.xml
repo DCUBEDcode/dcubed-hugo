@@ -6,6 +6,7 @@
     <description>Recent content in DCUBED on DCUBED | Dream. Design. Develop | Brisbane Web Design</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 04 May 2020 16:30:14 +1000</lastBuildDate>
     
 	<atom:link href="http://dcubed.com.au/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Create smoother animations with animation-fill-mode</title>
       <link>http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/</guid>
       <description>What is animation-fill-mode? animation-fill-mode is a CSS property which tells an animation how to apply styles to the target element before or after it is run.
@@ -24,7 +25,7 @@ Why is this so good? When you use animation-fill-mode: forward you can set the i
     <item>
       <title>Creating a prototype app using production data</title>
       <link>http://dcubed.com.au/blog/prototyping-with-real-data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/prototyping-with-real-data/</guid>
       <description>What is production data? Production data is data that is either a clone or the direct source of data that is used to power your exisiting apps. Typically your apps will receive data from &amp;ldquo;endpoints&amp;rdquo; which have been designed to return particular data. For example, your currenty app may call yourapp.com/api/countries to get a list of Countries.
@@ -34,7 +35,7 @@ The key here is the connection the content being used to compose a designers moc
     <item>
       <title>Finance X - Case Study</title>
       <link>http://dcubed.com.au/blog/finx-case-study/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/finx-case-study/</guid>
       <description>Requirements FinX is a finance solutions company that offers financial services to customers looking to purchase vehicles, equipment, marine, caravans and other commercial goods.
@@ -46,7 +47,7 @@ Responsive website The new landing page is a ‘responsive’ website.</descript
     <item>
       <title>Grow2 - Case Study</title>
       <link>http://dcubed.com.au/blog/grow2-case-study/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/grow2-case-study/</guid>
       <description>Requirements Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.
@@ -56,7 +57,7 @@ The point was made early on by the team at Grow2 that everybody had to have the 
     <item>
       <title>Simple way to A/B test your Vue prototypes</title>
       <link>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</guid>
       <description>Remote testing is an easy way to scale up your user testing. There are many great tools out there to help facilitate these kind of sessions.
@@ -66,7 +67,7 @@ Sometimes though you may be in two minds about which design you want to test and
     <item>
       <title>Uploading files direct to S3 using Vue, Dropzone &amp; NodeJS</title>
       <link>http://dcubed.com.au/blog/uploading-direct-to-s3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
       
       <guid>http://dcubed.com.au/blog/uploading-direct-to-s3/</guid>
       <description>Encountering this issue in a project recently, in which we use vue-dropzone, a Vue.js component for DropzoneJS which appears to provide upload directly to AWS S3 functionality out of the box.

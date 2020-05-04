@@ -1,6 +1,6 @@
 ---
 title: "Simple way to A/B test your Vue prototypes"
-date: 2020-05-4T16:30:14+10:00
+date: 2020-05-04T16:30:14+10:00
 description: "If you are running remote user testing and you want your partipants to randomly be bucketed into a test, this little trick does wonders."
 draft: false
 heroLargeUrl: /post-1.jpeg
