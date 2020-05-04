@@ -1379,7 +1379,7 @@ h3,
   overflow-x: auto;
 }
 
-.phones__list div {
+.phones__list > div {
   display: inline-block;
   white-space: normal;
 }
