@@ -1,5 +1,6 @@
 ---
 title: 'Creating a prototype app using production data'
+date: 2020-05-4T16:30:14+10:00
 'description': Designers often live in "best case scenario" land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.
 heroSmallUrl: '/post-header-proddata-small.png'
 heroLargeUrl: '/post-header-proddata-large@2x.png'

@@ -3,7 +3,7 @@ title: "Design at DCUBED"
 description: "Design is the difference between good and great. DCUBED relies
 on decades of learnings from building products to create memorable
 experiences."
-date: 2020-04-23T16:30:14+10:00
+date: 2020-05-4T16:30:14+10:00
 draft: false
 ---
 

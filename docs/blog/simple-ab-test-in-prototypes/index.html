@@ -6,6 +6,7 @@
     </title>
   <link
     href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:300,700,900|Raleway:800&amp;display=fallback" rel="stylesheet">
+  <meta name="description" content="Our talented team help your business innovate quicker than ever. Get in touch and let's find a way to transform your digital presence.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link rel="shortcut icon" href="/icon.svg">
   <link rel="stylesheet" href="/css/style.css">
@@ -54,12 +55,14 @@
 
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="post-title">Simple way to A/B test in your prototypes</h1>
+    <h1 id="title" class="post-title">Simple way to A/B test your Vue prototypes</h1>
     <aside class="post-meta double">
       <p id="date" class="flat">Published Mon Jan 1, 0001 </p>
       <span class="desktop-only">| </span>
-      <p id="wordcount" class="flat"> 0 minute read</p>
+      <p id="wordcount" class="flat"> 2 minute read</p>
     </aside>
+    
+      <p class="h3 double">If you are running remote user testing and you want your partipants to randomly be bucketed into a test, this little trick does wonders.</p>
     
     
       <div class="double">
@@ -67,7 +70,80 @@
       </div>
     
     <article id="content">
-      
+      <p>Remote testing is an easy way to scale up your user testing. There are many great tools out there to help facilitate these kind of sessions.</p>
+<p>Sometimes though you may be in two minds about which design you want to test and you only have the ability to provide a single URL for the user to access. Luckily we can use a little javascript to allow our browsers to randomly decide which design we want to show our user.</p>
+<h2 id="using-javascript-to-bucket-our-users">Using Javascript to bucket our users</h2>
+<p>To do this we need to make use of <code>Math.random()</code>. This function will allow us to return a number. This number can be used to represent one of variants. We can then pass this variant number to our components to conditionally render the relevant HTML.</p>
+<h3 id="example-vue-multivariate-component">Example Vue multivariate component</h3>
+<p>Let&rsquo;s say we want to test variants of a menu. Using Vue&rsquo;s <code>v-else-if</code> we can check the value of a prop to determine which menu variant we are going to display to the user.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  <span style="color:#6272a4">&lt;!-- menu-tester.html --&gt;</span>
+
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">v-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;variant === 1&#34;</span>&gt;
+    A
+    &lt;<span style="color:#ff79c6">MenuOne</span> /&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">v-else-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;variant === 2&#34;</span>&gt;
+    B
+    &lt;<span style="color:#ff79c6">MenuTwo</span> /&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">v-else-if</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;variant === 3&#34;</span>&gt;
+    C
+    &lt;<span style="color:#ff79c6">MenuThree</span> /&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;
+  &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">v-else</span>&gt;
+    <span style="color:#6272a4">&lt;!-- Default incase variant not passed --&gt;</span>
+    &lt;<span style="color:#ff79c6">MenuOne</span> /&gt;
+  &lt;/<span style="color:#ff79c6">div</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+<p>Since we know we have three variants we want to test in this example, we want to randomly assign <code>variant</code> a number between <code>1</code> and <code>3</code>. To do this we will use <code>Math.random() * 3</code> to get our number and wrap that in <code>Math.floor()</code> to round ff the number to it&rsquo;s nearest integer in a downward direction.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">Vue.component(<span style="color:#f1fa8c">&#39;menu-tester&#39;</span>, {
+  data<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span> () {
+    <span style="color:#ff79c6">return</span> {
+      variant<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Math</span>.floor((<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">3</span>))
+    }
+  },
+  template<span style="color:#ff79c6">:</span> require(<span style="color:#f1fa8c">&#39;menu-tester.html&#39;</span>)
+})
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Now every time the browser renders our <code>menu-tester</code> it will randomly choose one of the variants to show. You could also choose to do this at a higher level in your component structure, such as at a page level. This way you could have multiple modules responding to the same variant number.</p>
+
     </article>
     <aside id="meta">
       <div>
@@ -100,7 +176,6 @@
           
           <div class="post__body">
             <h4>Create smoother animations with animation-fill-mode</h4>
-            <p>Mon, Jan 1, 0001</p>
           </div>
         </a>
     
@@ -112,7 +187,6 @@
           
           <div class="post__body">
             <h4>Creating a prototype app using production data</h4>
-            <p>Mon, Jan 1, 0001</p>
           </div>
         </a>
     
@@ -123,8 +197,7 @@
           
           
           <div class="post__body">
-            <h4>Simple way to A/B test in your prototypes</h4>
-            <p>Mon, Jan 1, 0001</p>
+            <h4>Simple way to A/B test your Vue prototypes</h4>
           </div>
         </a>
     
@@ -136,7 +209,6 @@
           
           <div class="post__body">
             <h4>Uploading files direct to S3 using Vue, Dropzone &amp; NodeJS</h4>
-            <p>Mon, Jan 1, 0001</p>
           </div>
         </a>
     

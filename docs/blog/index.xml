@@ -54,12 +54,13 @@ The point was made early on by the team at Grow2 that everybody had to have the 
     </item>
     
     <item>
-      <title>Simple way to A/B test in your prototypes</title>
+      <title>Simple way to A/B test your Vue prototypes</title>
       <link>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://dcubed.com.au/blog/simple-ab-test-in-prototypes/</guid>
-      <description></description>
+      <description>Remote testing is an easy way to scale up your user testing. There are many great tools out there to help facilitate these kind of sessions.
+Sometimes though you may be in two minds about which design you want to test and you only have the ability to provide a single URL for the user to access. Luckily we can use a little javascript to allow our browsers to randomly decide which design we want to show our user.</description>
     </item>
     
     <item>
@@ -71,15 +72,6 @@ The point was made early on by the team at Grow2 that everybody had to have the 
       <description>Encountering this issue in a project recently, in which we use vue-dropzone, a Vue.js component for DropzoneJS which appears to provide upload directly to AWS S3 functionality out of the box.
 Looking at the documentation, it appears that we need a URL signer to return an S3 Policy in the following format:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &amp;#34;signature&amp;#34;:{ &amp;#34;Content-Type&amp;#34;:&amp;#34;&amp;#34;, &amp;#34;acl&amp;#34;:&amp;#34;public-read-write&amp;#34;, &amp;#34;success_action_status&amp;#34;:&amp;#34;201&amp;#34;, &amp;#34;policy&amp;#34;:&amp;#34;abc123&amp;#34;, &amp;#34;X-amz-credential&amp;#34;:&amp;#34;AKIAIM3WELV3PLALOYDQ\/20171012\/us-west-2\/s3\/aws4_request&amp;#34;, &amp;#34;X-amz-algorithm&amp;#34;:&amp;#34;AWS4-HMAC-SHA256&amp;#34;, &amp;#34;X-amz-date&amp;#34;:&amp;#34;20171012T054729Z&amp;#34;, &amp;#34;X-amz-signature&amp;#34;:&amp;#34;5227d84360d92ef8al45549805b3746f2f1d6641df8986aamcr939c35513cd7c&amp;#34;, &amp;#34;key&amp;#34;:&amp;#34;&amp;#34; }, &amp;#34;postEndpoint&amp;#34;:&amp;#34;\/\/s3-us-west-2.</description>
-    </item>
-    
-    <item>
-      <title>When to use animate or transition in CSS</title>
-      <link>http://dcubed.com.au/blog/when-to-animate-vs-transition/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://dcubed.com.au/blog/when-to-animate-vs-transition/</guid>
-      <description></description>
     </item>
     
   </channel>

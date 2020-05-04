@@ -1,5 +1,6 @@
 ---
 title: 'Uploading files direct to S3 using Vue, Dropzone & NodeJS'
+date: 2020-05-4T16:30:14+10:00
 description: "To upload files in a web application, a user's browser typically uploads directly to an application server. This approach comes with a variety of problems such as server timeouts, memory limitations and bandwidth costs associated with double-handling the file."
 heroSmallUrl: '/post-header-upload3-small.png'
 heroLargeUrl: '/post-header-uploads3-large@2x.png'

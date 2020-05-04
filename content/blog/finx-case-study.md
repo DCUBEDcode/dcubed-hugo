@@ -1,5 +1,6 @@
 ---
 title: 'Finance X - Case Study'
+date: 2020-05-4T16:30:14+10:00
 description: 'Finance X is a new finance company based in Brisbane had all their merch labelled with their domain but no website! This popup site was created in a weekend to help them start taking traffic and capturing finance enquiries.'
 draft: false
 heroTall: '/post-header-finx-small@2x.png'

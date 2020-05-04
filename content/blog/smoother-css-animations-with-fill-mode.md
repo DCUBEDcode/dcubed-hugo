@@ -1,5 +1,6 @@
 ---
 title: 'Create smoother animations with animation-fill-mode'
+date: 2020-05-4T16:30:14+10:00
 description: "Supercharge your animations by taking control of your animated elements, before and after they run their animations."
 heroSmallUrl: '/post-header-fill-small.png'
 heroLargeUrl: '/post-header-fill-large@2x.png'
