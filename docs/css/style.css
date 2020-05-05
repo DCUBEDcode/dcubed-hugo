@@ -27,6 +27,7 @@ body {
   position: relative;
 }
 
+ul + h2,
 ol + h2,
 p + h2 {
   margin-top: 2rem;
