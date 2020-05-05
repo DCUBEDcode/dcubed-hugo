@@ -1,5 +1,5 @@
 ---
-title: "Design Deeds"
+title: "Design Deeds at DCUBED"
 description: "Everybody is doing it tough at the moment. It would be a pleasure if DCUBED could help any person/company/organisation that is struggling right now due to COVID-19 by building them a new website - free of charge. "
 date: 2020-05-4T16:30:14+10:00
 heroLargeUrl: '/post-header-deeds-large@2x.png'
