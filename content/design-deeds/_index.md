@@ -32,3 +32,8 @@ The website build goes for two days and in this time I will be coming up with th
 1. All IP including design assets, code, concepts will belong to the chosen applicant.
 2. There will be no requirement what so ever to continue engagement with DCUBED for any support work. If you want to then of course we can arrange but it is not expected.
 3. No reselling any design assets / code made by DCUBED.
+4. The design and website provided will not be accepting feedback or revisions. DCUBED will make sure to ask the right questions before kick off so you get what you want.
+
+## Apply
+
+If you, your company or anyone you know would benefit from the above then please use the following form to apply. Thank you for your engagement.

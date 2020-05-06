@@ -1,0 +1,30 @@
+<form method="POST" action="https://formspree.io/mgenelon" class="form" id="deedsform">
+  <div class="form__content">
+    <div class="form__group">
+      <input type="text" id="first-name" name="firstName" placeholder="First name*" class="form__input"
+                                                                                    required>
+    </div>
+    <div class="form__group">
+      <input type="email" name="email" placeholder="Email address" class="form__input"
+                                                                  required>
+    </div>
+    <div class="form__group desktop-only">
+      <input type="text" name="company" placeholder="Company name" class="form__input">
+    </div>
+    <div class="form__group desktop-only">
+      <textarea name="story" placeholder="Your story" class="form__input"></textarea>
+    </div>
+    <button class="btn btn--large btn--block" id="form-submit">Submit Form</button>
+  </div>
+  <div class="form__success">
+    <h2>Thanks for your enquiry</h2>
+    <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
+    <p>- Jason from DCUBED</p>
+  </div>
+  <div class="form__error">
+    <h2>Something wen't wrong</h2>
+    <p>Not sure what happened here. You can try again or feel free to
+    email us below.</p>
+    <p>- Jason from DCUBED</p>
+  </div>
+</form>
