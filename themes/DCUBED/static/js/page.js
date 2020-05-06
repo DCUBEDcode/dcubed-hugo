@@ -26,6 +26,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const forms = document.querySelectorAll('.form');
 
   const applicantBtns = document.querySelectorAll('.applicant-btn');
+  const deedFields = document.getElementById('deedFields');
 
   function success(target) {
     console.log(target);
@@ -70,15 +71,30 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const handleApplicantClick = (e) => {
     e.preventDefault();
     const applyingFor = e.target.id;
-    console.log(applyingFor);
+    const selected = document.querySelector('.btn--tab-selected');
+    if (selected) {
+      selected.classList.remove('btn--tab-selected');
+      e.target.classList.add('btn--tab-selected');
+    }
+    deedFields.classList.remove('form__content--hidden')
+    if(applyingFor === 'yourself') {
+      deedFields.classList.remove('form__content--someoneelse');
+      deedFields.classList.add('form__content--yourself');
+      document.getElementById('firstName').focus();
+    }
+    if(applyingFor === 'someoneelse') {
+      deedFields.classList.remove('form__content--yourself');
+      deedFields.classList.add('form__content--someoneelse');
+      document.getElementById('nomineeName').focus();
+    }
   }
 
   const handleScroll = () => raf( () => {
-    if(grow2 && isAnyPartOfElementInViewport(grow2)) {
+    if (grow2 && isAnyPartOfElementInViewport(grow2)) {
       grow2.classList.add('grow2--active');
     }
 
-    if(finxLogo && isAnyPartOfElementInViewport(finxLogo)) {
+    if (finxLogo && isAnyPartOfElementInViewport(finxLogo)) {
       finxLogo.classList.add('finx-logo--ready');
     }
   })
@@ -105,7 +121,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
   })
 
   applicantBtns.forEach((btn) => {
-    btn.addEventListener('submit', handleApplicantClick)
+    btn.addEventListener('click', handleApplicantClick)
   })
 
   if (location.pathname == '/') {

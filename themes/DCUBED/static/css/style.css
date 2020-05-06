@@ -886,6 +886,7 @@ h3,
 
 .btn {
   display: inline-block;
+  user-select: none;
   background: #ff6100;
   border: 0;
   color: #fff;
@@ -911,12 +912,13 @@ h3,
 
 .btn--tab {
   background: #fff;
-  border: 1px solid #333;
-  color: #333;
+  border: 1px solid #13182f;
+  color: #13182f;
 }
 
 .btn--tab-selected {
-  background: #333;
+  background: #13182f;
+  color: #fff;
 }
 
 .btn--light {
@@ -1223,7 +1225,15 @@ h3,
   cursor: pointer;
 }
 
+.form__content--deeds {
+  padding-top: 2rem;
+}
+
 .form__content--hidden {
+  display: none;
+}
+
+.form__content--yourself .form__group--nominee {
   display: none;
 }
 
