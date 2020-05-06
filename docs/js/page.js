@@ -80,11 +80,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
     if(applyingFor === 'yourself') {
       deedFields.classList.remove('form__content--someoneelse');
       deedFields.classList.add('form__content--yourself');
+      document.getElementById('story').setAttribute('placeholder', 'How has COVID-19 affected you?');
       document.getElementById('firstName').focus();
     }
     if(applyingFor === 'someoneelse') {
       deedFields.classList.remove('form__content--yourself');
       deedFields.classList.add('form__content--someoneelse');
+      document.getElementById('story').setAttribute('placeholder', 'How has COVID-19 affected them?');
       document.getElementById('nomineeName').focus();
     }
   }
