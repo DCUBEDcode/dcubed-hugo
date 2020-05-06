@@ -1,6 +1,6 @@
 ---
 title: "Design Deeds at DCUBED"
-description: "Everybody is doing it tough at the moment. At DCUBED we thought we could lend a hand by building a new website, completely free,  for anyone who is struggling – a person, a company, an organization."
+description: "Everybody is doing it tough at the moment. At DCUBED we thought we could lend a hand by building a new website, **completely free**,  for anyone who is struggling – a person, a company, an organization."
 date: 2020-05-4T16:30:14+10:00
 heroLargeUrl: '/post-header-deeds-large@2x.png'
 draft: false

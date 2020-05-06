@@ -9,7 +9,7 @@
         <h1>{{.Title}}</h1>
       </header>
       {{ if .Description }}
-      <p class="h3 double">{{ .Description }}</p>
+      <p class="h3 double">{{ .Description | markdownify }}</p>
       {{ end }}
       {{ if .Params.heroLargeUrl }}
       <div class="double deeds-hero">
