@@ -6,7 +6,7 @@ heroLargeUrl: '/post-header-deeds-large@2x.png'
 draft: false
 ---
 
-The website build will be **streamed on Twitch from May 21 - 22**. People will be able to donate money to the chosen applicant via the stream.
+The website build will be **streamed on Twitch**. People will be able to donate money to the chosen applicant via the stream. You can follow the [Twitch page](https://www.twitch.tv/dcubedau) now to be notified when the stream is starting.
 
 ## Why make stuff for free?
 
@@ -27,13 +27,17 @@ The website build goes for two days and in this time I will be coming up with th
 <h4 class="flat">Microsite</h4>
 <p>Perhaps a larger organisation doing good stuff and you need a microsite made for a campaign made</p>
 
-## Important fine print
+## Apply
+
+If you, your company or anyone you know would benefit from the above then please use the following form to apply. Simply explain how you or someone you know has been affected and how a website could help the situation.
+
+### Terms & Conditions:
 
 1. All IP including design assets, code, concepts will belong to the chosen applicant.
 2. There will be no requirement what so ever to continue engagement with DCUBED for any support work. If you want to then of course we can arrange but it is not expected.
 3. No reselling any design assets / code made by DCUBED.
 4. The design and website provided will not be accepting feedback or revisions. DCUBED will make sure to ask the right questions before kick off so you get what you want.
 
-## Apply
+<div class="double"></div>
 
-If you, your company or anyone you know would benefit from the above then please use the following form to apply. Thank you for your engagement.
+{{% deeds-form %}}

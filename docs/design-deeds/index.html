@@ -71,7 +71,7 @@
             <img src="/post-header-deeds-large@2x.png" alt="" />
           </div>
         
-        <p>The website build will be <strong>streamed on Twitch from May 21 - 22</strong>. People will be able to donate money to the chosen applicant via the stream.</p>
+        <p>The website build will be <strong>streamed on Twitch</strong>. People will be able to donate money to the chosen applicant via the stream. You can follow the <a href="https://www.twitch.tv/dcubedau">Twitch page</a> now to be notified when the stream is starting.</p>
 <h2 id="why-make-stuff-for-free">Why make stuff for free?</h2>
 <ul>
 <li>I want to help. If people need something that I can offer right now and it will make a positive change to their situation, then why not.</li>
@@ -86,15 +86,56 @@
 <p>3-4 page website about your business including home page and contact form</p>
 <h4 class="flat">Microsite</h4>
 <p>Perhaps a larger organisation doing good stuff and you need a microsite made for a campaign made</p>
-<h2 id="important-fine-print">Important fine print</h2>
+<h2 id="apply">Apply</h2>
+<p>If you, your company or anyone you know would benefit from the above then please use the following form to apply. Simply explain how you or someone you know has been affected and how a website could help the situation.</p>
+<h3 id="terms--conditions">Terms &amp; Conditions:</h3>
 <ol>
 <li>All IP including design assets, code, concepts will belong to the chosen applicant.</li>
 <li>There will be no requirement what so ever to continue engagement with DCUBED for any support work. If you want to then of course we can arrange but it is not expected.</li>
 <li>No reselling any design assets / code made by DCUBED.</li>
 <li>The design and website provided will not be accepting feedback or revisions. DCUBED will make sure to ask the right questions before kick off so you get what you want.</li>
 </ol>
-<h2 id="apply">Apply</h2>
-<p>If you, your company or anyone you know would benefit from the above then please use the following form to apply. Thank you for your engagement.</p>
+<div class="double"></div>
+<form method="POST" action="https://formspree.io/mgenelon" class="form form--deeds" id="deedsform">
+  <div>
+    <h3 class="text-center double">Who are you applying for?</h3>
+    <div class="form__actions double">
+      <div class="btn btn--tab-selected applicant-btn" id="yourself">Yourself</div>
+      <div class="btn btn--tab applicant-btn" id="someoneelse">Someone else</div>
+    </div>
+  </div>
+  <div class="form__content" id="deedFields">
+    <div class="form__group form__group--nominee">
+      <input type="email" name="nomineeName" placeholder="Nominees name" class="form__input">
+    </div>
+    <div class="form__group">
+      <input type="text" id="first-name" name="name" placeholder="Your name" class="form__input"
+                                                                                    required>
+    </div>
+    <div class="form__group">
+      <input type="email" name="email" placeholder="Your email" class="form__input"
+                                                                  required>
+    </div>
+    <div class="form__group">
+      <textarea name="story" id="story" placeholder="How has COVID-19 affected you?" class="form__input" required></textarea>
+    </div>
+    <div class="form__group double">
+      <textarea name="reason" id="reason" placeholder="How could a website help?" class="form__input" required></textarea>
+    </div>
+    <button class="btn btn--large btn--block" id="form-submit">Submit application</button>
+  </div>
+  <div class="form__success">
+    <h2>Thanks for your enquiry</h2>
+    <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
+    <p>- Jason from DCUBED</p>
+  </div>
+  <div class="form__error">
+    <h2>Something wen't wrong</h2>
+    <p>Not sure what happened here. You can try again or feel free to
+    email us below.</p>
+    <p>- Jason from DCUBED</p>
+  </div>
+</form>
 
       </article>
     </div>

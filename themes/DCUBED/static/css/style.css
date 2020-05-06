@@ -21,6 +21,10 @@ body {
   font-size: 75%;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .wrap {
   overflow: hidden;
   width: 100%;
@@ -905,6 +909,16 @@ h3,
   line-height: 42px; /* take away borders */
 }
 
+.btn--tab {
+  background: #fff;
+  border: 1px solid #333;
+  color: #333;
+}
+
+.btn--tab-selected {
+  background: #333;
+}
+
 .btn--light {
   color: #fff;
 }
@@ -1175,6 +1189,14 @@ h3,
   margin: 0 -1.5rem;
 }
 
+.form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__actions .btn { margin: 0 1rem }
+
 .form__group {
   margin-bottom: 1rem;
 }
@@ -1186,6 +1208,8 @@ h3,
   border: 0;
   border-radius: 0;
   font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: 300;
   border-bottom: 1px solid #ddd;
   outline: 0;
 }
@@ -1197,6 +1221,10 @@ h3,
   margin-left: -1rem;
   margin-right: -1rem;
   cursor: pointer;
+}
+
+.form__content--hidden {
+  display: none;
 }
 
 .form__checkbox span {
@@ -1645,6 +1673,10 @@ h3,
   .form {
     padding: 3rem;
     margin: 0;
+  }
+
+  .form--deeds {
+    margin: 4rem 0;
   }
 
   .intro {

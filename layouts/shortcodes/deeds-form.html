@@ -1,20 +1,30 @@
-<form method="POST" action="https://formspree.io/mgenelon" class="form" id="deedsform">
-  <div class="form__content">
+<form method="POST" action="https://formspree.io/mgenelon" class="form form--deeds" id="deedsform">
+  <div>
+    <h3 class="text-center double">Who are you applying for?</h3>
+    <div class="form__actions double">
+      <div class="btn btn--tab-selected applicant-btn" id="yourself">Yourself</div>
+      <div class="btn btn--tab applicant-btn" id="someoneelse">Someone else</div>
+    </div>
+  </div>
+  <div class="form__content" id="deedFields">
+    <div class="form__group form__group--nominee">
+      <input type="email" name="nomineeName" placeholder="Nominees name" class="form__input">
+    </div>
     <div class="form__group">
-      <input type="text" id="first-name" name="firstName" placeholder="First name*" class="form__input"
+      <input type="text" id="first-name" name="name" placeholder="Your name" class="form__input"
                                                                                     required>
     </div>
     <div class="form__group">
-      <input type="email" name="email" placeholder="Email address" class="form__input"
+      <input type="email" name="email" placeholder="Your email" class="form__input"
                                                                   required>
     </div>
-    <div class="form__group desktop-only">
-      <input type="text" name="company" placeholder="Company name" class="form__input">
+    <div class="form__group">
+      <textarea name="story" id="story" placeholder="How has COVID-19 affected you?" class="form__input" required></textarea>
     </div>
-    <div class="form__group desktop-only">
-      <textarea name="story" placeholder="Your story" class="form__input"></textarea>
+    <div class="form__group double">
+      <textarea name="reason" id="reason" placeholder="How could a website help?" class="form__input" required></textarea>
     </div>
-    <button class="btn btn--large btn--block" id="form-submit">Submit Form</button>
+    <button class="btn btn--large btn--block" id="form-submit">Submit application</button>
   </div>
   <div class="form__success">
     <h2>Thanks for your enquiry</h2>

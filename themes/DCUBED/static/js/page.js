@@ -23,27 +23,30 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const navIcons = document.querySelectorAll('.toggle-nav');
   const closeNav = document.querySelector('.close-nav');
 
-  const form = document.getElementById('form');
-  const formBtn = document.getElementById('form-button');
+  const forms = document.querySelectorAll('.form');
 
-  function success() {
-    form.classList.add('form--success');
+  const applicantBtns = document.querySelectorAll('.applicant-btn');
+
+  function success(target) {
+    console.log(target);
+    target.classList.add('form--success');
   }
 
-  function error() {
-    form.classList.add('form--error');
+  function error(target) {
+    console.log(target);
+    target.classList.add('form--error');
   }
 
-  function ajax(method, url, data, success, error) {
+  function ajax(method, url, data, success, error, target) {
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = function() {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
+        success(target);
       } else {
-        error(xhr.status, xhr.response, xhr.responseType);
+        error(target);
       }
     };
     xhr.send(data);
@@ -64,6 +67,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
     nav.classList.toggle('header__nav--open');
   }
 
+  const handleApplicantClick = (e) => {
+    e.preventDefault();
+    const applyingFor = e.target.id;
+    console.log(applyingFor);
+  }
+
   const handleScroll = () => raf( () => {
     if(grow2 && isAnyPartOfElementInViewport(grow2)) {
       grow2.classList.add('grow2--active');
@@ -76,8 +85,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
     const data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
+    ajax(form.method, form.action, data, success, error, form);
   }
 
   navIcons.forEach((icon) => {
@@ -90,16 +100,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
     cta.addEventListener('click', handleCtaClick)
   }
 
-  form.addEventListener('submit', handleFormSubmit)
+  forms.forEach((form) => {
+    form.addEventListener('submit', handleFormSubmit)
+  })
+
+  applicantBtns.forEach((btn) => {
+    btn.addEventListener('submit', handleApplicantClick)
+  })
 
   if (location.pathname == '/') {
     window.addEventListener( 'scroll', handleScroll )
   }
-
-  setTimeout(() => {
-    document.querySelector('.header--solid').classList.remove('header--solid');
-  }, 1500)
-
 
 } )
 
