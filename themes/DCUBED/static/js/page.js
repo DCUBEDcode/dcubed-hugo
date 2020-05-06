@@ -74,8 +74,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const selected = document.querySelector('.btn--tab-selected');
     if (selected) {
       selected.classList.remove('btn--tab-selected');
-      e.target.classList.add('btn--tab-selected');
     }
+    e.target.classList.add('btn--tab-selected');
     deedFields.classList.remove('form__content--hidden')
     if(applyingFor === 'yourself') {
       deedFields.classList.remove('form__content--someoneelse');
