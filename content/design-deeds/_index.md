@@ -1,6 +1,6 @@
 ---
 title: "Design Deeds at DCUBED"
-description: "Everybody is doing it tough at the moment. At DCUBED we thought we could lend a hand by building a new website for someone who is struggling – a person, a company, an organization – for free."
+description: "Everybody is doing it tough at the moment. At DCUBED we thought we could lend a hand by building a new website, completely free,  for anyone who is struggling – a person, a company, an organization."
 date: 2020-05-4T16:30:14+10:00
 heroLargeUrl: '/post-header-deeds-large@2x.png'
 draft: false
@@ -16,7 +16,7 @@ The website build will be **streamed on Twitch**. You can follow the [Twitch pag
 
 ## What kind of website?
 
-The website build goes for two days and in this time I will be coming up with the design, content strategy, information architecture and, of course, be writing code. Becuase this is such a short time and a lot to get through, the website must be of reasonable size with basic features. This doesn't mean we can't make magic! Here are some ideas that could work:
+The website build goes for two days and in this time I will be coming up with the design, content strategy, information architecture and, of course, be writing code. Because this is such a short time and a lot to get through, the website must be of reasonable size with basic features. This doesn't mean we can't make magic! Here are some ideas that could work:
 
 <h4 class="flat">Artist page</h4>
 <p>One pager with images, instagram feed and contact details</p>
