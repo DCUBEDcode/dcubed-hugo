@@ -887,6 +887,8 @@ h3,
 .btn {
   display: inline-block;
   user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
   background: #ff6100;
   border: 0;
   color: #fff;
