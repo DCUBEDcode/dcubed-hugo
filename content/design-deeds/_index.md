@@ -10,8 +10,8 @@ The website build will be **streamed on Twitch**. You can follow the [Twitch pag
 
 ## Why make stuff for free?
 
-- We want to help. If people need something that we can offer right now and it will make a positive change to their situation, then why not. We all need each other now more than ever.
-- We want to teach and share our expertise. People who might be out of work and want to learn new stuff. It might inspire them to learn more and perhaps get into the industry.
+- We want to help. If people need something that we can offer right now and it will make a positive change to their situation, then why not? We all need each other now more than ever.
+- We want to teach and share our expertise. People who might be out of work and want to learn new skills. It might inspire them to learn more and perhaps get into the industry.
 - It will be a lot of fun.
 
 ## What kind of website?
