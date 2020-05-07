@@ -1280,7 +1280,15 @@ h3,
   display: none;
 }
 
+.form--submitted .form__btn {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.form--success .form__intro,
 .form--success .form__content,
+.form--error .form__intro,
 .form--error .form__content {
   display: none;
 }

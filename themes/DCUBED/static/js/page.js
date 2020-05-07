@@ -105,6 +105,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
+    form.classList.add('form--submitted');
     ajax(form.method, form.action, data, success, error, form);
   }
 

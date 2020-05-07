@@ -97,7 +97,7 @@
 </ol>
 <div class="double"></div>
 <form method="POST" action="https://formspree.io/mgenelon" class="form form--deeds" id="deedsform">
-  <div>
+  <div class="form__intro">
     <h3 class="text-center double">Who are you applying for?</h3>
     <div class="form__actions">
       <label class="btn btn--tab applicant-btn" for="firstName" id="yourself">Yourself</label>
@@ -106,7 +106,7 @@
   </div>
   <div class="form__content form__content--deeds form__content--hidden" id="deedFields">
     <div class="form__group form__group--nominee">
-      <input type="email" id="nomineeName" name="nomineeName" placeholder="Nominees name" class="form__input">
+      <input type="text" id="nomineeName" name="nomineeName" placeholder="Nominees name" class="form__input">
     </div>
     <div class="form__group">
       <input type="text" id="firstName" name="name" placeholder="Your name" class="form__input"
@@ -122,11 +122,11 @@
     <div class="form__group double">
       <textarea name="reason" id="reason" placeholder="How would a website help?" class="form__input" required></textarea>
     </div>
-    <button class="btn btn--large btn--block" id="form-submit">Submit application</button>
+    <button class="btn btn--large btn--block form__btn" id="form-submit">Submit application</button>
   </div>
   <div class="form__success">
-    <h2>Thanks for your enquiry</h2>
-    <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
+    <h2>Thanks for your application</h2>
+    <p>We will review your application and let you know as soon as we make a decision on the successful applicant. Thank you for your patience.</p>
     <p>- Jason from DCUBED</p>
   </div>
   <div class="form__error">
@@ -258,7 +258,7 @@
             <span>I'm interested in Design Sprint training/facilitation</span>
           </label>
         </div>
-        <button class="btn btn--large btn--block" id="form-submit">Submit Form</button>
+        <button class="btn btn--large btn--block form__button" id="form-submit">Submit Form</button>
       </div>
       <div class="form__success">
         <h2>Thanks for your enquiry</h2>
