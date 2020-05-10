@@ -3,6 +3,7 @@
   <title>{{ block "title" . }}
     {{ .Site.Title }}
     {{ end }}</title>
+  {{- partial "redirect.html" . -}}
   <link
     href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:300,700,900|Raleway:800&amp;display=fallback" rel="stylesheet">
   <meta property="og:url"                content="{{ .Permalink }}" />
@@ -14,5 +15,4 @@
   <link rel="shortcut icon" href="/icon.svg">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
-  {{- partial "redirect.html" . -}}
 </head>
