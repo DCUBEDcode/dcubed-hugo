@@ -16,46 +16,6 @@
   <link rel="shortcut icon" href="/icon.svg">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
-  <script>
-    function redirectPageIfNeeded(canonicalURL) {
-      
-      var regexp = new RegExp("(https?:)//([^/]+)");
-      var matches = regexp.exec(canonicalURL);
-      var canonicalProto = matches[1];
-      var canonicalHost = matches[2];
-
-      
-      var href = location.href;
-
-      
-      var hrefRedirect = false;
-
-      
-      if (location.protocol.toLowerCase() !== canonicalProto) {
-        href =
-          canonicalProto + 
-          href.substring(location.protocol.length); 
-        hrefRedirect = true;
-      }
-
-      
-      if (location.host.toLowerCase() !== canonicalHost) {
-        var pos = href.indexOf(location.host);
-        href =
-          href.substring(0, pos) + 
-          canonicalHost + 
-          href.substring(pos + location.host.length); 
-        hrefRedirect = true;
-      }
-
-      
-      if (hrefRedirect) {
-        location.href = href;
-      }
-    }
-
-    redirectPageIfNeeded("https://www.dcubed.com.au/");
-  </script>
 </head>
 <body>
       <div class="wrap"><div class="header" id="header">

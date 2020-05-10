@@ -1,0 +1,23 @@
+{
+  "name": "dcubed-hugo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "final": "rm -rf public && NODE_ENV=production hugo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsncbt/dcubed-hugo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsncbt/dcubed-hugo/issues"
+  },
+  "homepage": "https://github.com/jsncbt/dcubed-hugo#readme"
+}
