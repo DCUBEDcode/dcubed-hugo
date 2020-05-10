@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design Deeds at DCUBED on DCUBED | Dream. Design. Develop | Brisbane Web Design</title>
-    <link>http://dcubed.com.au/design-deeds/</link>
+    <link>//dcubed.com.au/design-deeds/</link>
     <description>Recent content in Design Deeds at DCUBED on DCUBED | Dream. Design. Develop | Brisbane Web Design</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://dcubed.com.au/design-deeds/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//dcubed.com.au/design-deeds/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
