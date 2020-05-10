@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development at DCUBED on DCUBED | Dream. Design. Develop | Brisbane Web Design</title>
-    <link>//dcubed.com.au/development/</link>
+    <link>https://dcubed.com.au/development/</link>
     <description>Recent content in Development at DCUBED on DCUBED | Dream. Design. Develop | Brisbane Web Design</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="//dcubed.com.au/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dcubed.com.au/development/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
