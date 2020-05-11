@@ -313,6 +313,23 @@ pre code {
   padding: 1rem;
 }
 
+.deeds-banner {
+  background: #6812ea;
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 0.825rem;
+}
+
+.deeds-banner p {
+  margin-bottom: 0;
+}
+
+.deeds-banner a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+}
+
 .header {
   display: flex;
   padding: 1rem;
@@ -330,7 +347,7 @@ pre code {
 
   position: relative;
   overflow: hidden;
-  min-height: 97vh;
+  min-height: 90vh;
 }
 
 .header__bg {
