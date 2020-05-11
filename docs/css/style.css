@@ -316,8 +316,11 @@ pre code {
 .deeds-banner {
   background: #6812ea;
   color: #fff;
-  padding: 1rem 0;
   font-size: 0.825rem;
+}
+
+.deeds-banner .container {
+  padding: 1rem;
 }
 
 .deeds-banner p {
