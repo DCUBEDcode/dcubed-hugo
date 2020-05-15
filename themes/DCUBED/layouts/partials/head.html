@@ -8,7 +8,11 @@
   <meta property="og:url"                content="{{ .Permalink }}" />
   <meta property="og:title"              content="{{ .Title }}" />
   <meta property="og:description"        content="{{ .Description }}" />
-  <meta property="og:image"              content="{{ .Site.BaseURL }}dcubed-og.jpg" />
+  {{ with .Params.ogImage }}
+    <meta property="og:image"              content="https://dcubed.com.au/{{ . }}" />
+  {{ else }}
+    <meta property="og:image"              content="{{ .Site.BaseURL }}dcubed-og.jpg" />
+  {{ end }}
   <meta name="description" content="{{ .Description }}">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link rel="shortcut icon" href="/icon.svg">

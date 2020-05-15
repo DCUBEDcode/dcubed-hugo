@@ -5,6 +5,7 @@ description: 'Finance X is a new finance company based in Brisbane had all their
 draft: false
 heroTall: '/post-header-finx-small@2x.png'
 heroSmallUrl: '/post-header-finx-small.png'
+ogImage: 'post-header-finx-large.png'
 heroLargeUrl: '/post-header-finx-large.png'
 heroClass: finx
 type: casestudy
