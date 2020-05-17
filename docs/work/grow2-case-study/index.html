@@ -6,13 +6,13 @@
     </title>
   <link
     href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:300,700,900|Raleway:800&amp;display=fallback" rel="stylesheet">
-  <meta property="og:url"                content="https://dcubed.com.au/blog/prototyping-with-real-data/" />
-  <meta property="og:title"              content="Creating a prototype app using production data" />
-  <meta property="og:description"        content="Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart." />
+  <meta property="og:url"                content="https://dcubed.com.au/work/grow2-case-study/" />
+  <meta property="og:title"              content="Grow2 - Case Study" />
+  <meta property="og:description"        content="Grow2 is an education startup based in Brisbane, Australia who have created an information platform for sporting clubs. Their priority is to make sure everyone can receive training in all formats - text, imagery, audio or video." />
   
     <meta property="og:image"              content="https://dcubed.com.au/dcubed-og.jpg" />
   
-  <meta name="description" content="Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.">
+  <meta name="description" content="Grow2 is an education startup based in Brisbane, Australia who have created an information platform for sporting clubs. Their priority is to make sure everyone can receive training in all formats - text, imagery, audio or video.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link rel="shortcut icon" href="/icon.svg">
   <link rel="stylesheet" href="/css/style.css">
@@ -72,52 +72,156 @@
 
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="post-title">Creating a prototype app using production data</h1>
+    <header class="post-header">
+      <h1 id="title" class="post-title">Grow2 - Case Study</h1>
+      <a href="https://www.grow2.com.au" class="btn" target="_blank">Visit Site</a>
+    </header>
     <aside class="post-meta double">
       <p id="date" class="flat">Published Mon May 4, 2020 </p>
       <span class="desktop-only">| </span>
-      <p id="wordcount" class="flat"> 3 minute read</p>
+      <p id="wordcount" class="flat"> 2 minute read</p>
     </aside>
     
-      <p class="h3 double">Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.</p>
-    
-    
-      <div class="double">
-        <img src="/post-header-proddata-large@2x.png" alt="" />
+    <div class="double post-hero post-hero--grow2">
+        <div class="post-hero__content">
+          <img src="/post-header-grow2-large@2x.png" alt="" />
+        </div>
       </div>
     
+    
+      <p class="h3 double">Grow2 is an education startup based in Brisbane, Australia who have created an information platform for sporting clubs. Their priority is to make sure everyone can receive training in all formats - text, imagery, audio or video.</p>
+    
+    
+      <h2 class="double">Deliverables</h2>
+      <ul class="deliverables">
+        
+          <li><i class="fal fa-fingerprint"></i>Brand</li>
+        
+          <li><i class="fal fa-tape"></i>UI Design</li>
+        
+          <li><i class="fal fa-desktop"></i>Desktop web app</li>
+        
+          <li><i class="fal fa-mobile"></i>Mobile web app</li>
+        
+      </ul>
+    
     <article id="content">
-      <h2 id="what-is-production-data">What is production data?</h2>
-<p>Production data is data that is either a clone or the direct source of data that is used to power your exisiting apps. Typically your apps will receive data from &ldquo;endpoints&rdquo; which have been designed to return particular data. For example, your currenty app  may call <code>yourapp.com/api/countries</code> to get a list of <code>Countries</code>.</p>
-<p>The key here is the connection the content being used to compose a designers mock and what we will end up showing to our users. Maintaining this connection means that what we deliver is consistent with what was proposed and user tested against.</p>
-<h3 id="benefits-of-using-production-data">Benefits of using production data</h3>
-<ol>
-<li>Designers are exposed to back end systems, if only endpoints of an API. They are aware of the limitations, which are important to designing realistic pieces given time constraints.</li>
-<li>Content gaps are exposed early by user testing.</li>
-<li>The transition from prototype code to production code is minimal meaning release time is considerably less.</li>
-</ol>
-<h2 id="two-things-you-need-to-make-this-happen">Two things you need to make this happen</h2>
-<p>Everybody will have a different production setup and I hope this article is more of a conversation starter than a tutorial. I will go through a high level overview of what a setup could look like.</p>
-<h3 id="1-modern-front-end-library-reactvue">1. Modern front end library (React/Vue)</h3>
-<p>If your production environment uses a modern front end library such as React/Vue, then use that in your prototyping app. If you are not blessed with a modern production front end then I would suggest switching to a modern library for your prototype app. You will be able to build things so much faster by using props and all the powerful templating patterns.</p>
-<p>The only down side is you won&rsquo;t have the ability to easily move code from prototype to production.</p>
-<p><em>Bonus points for having your organisations design system written in your favourite front end frame work</em></p>
-<h3 id="2-node-server">2. Node Server</h3>
-<p>Node is fast enough, easy enough, reliable enough to recommend using to create your prototyping app. You will use this app to compose your components into views and populate them with data from your production endpoints. In this app, you will define routes which map back to production APIs to give back the data your composed views need.</p>
-<p>The routes you define will be determined by your design. Say for example you work for a company that makes a Fantasy Football app and you want to display a uses profile. The engineers would most likely already have an endpoint that returns this kind of data, therefore you would create a route in your Node app to call this endpoint and return its data. Something like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  app.<span style="color:#50fa7b">get</span>(&#39;<span style="color:#ff79c6">/</span>profile<span style="color:#ff79c6">/</span>:user&#39;, (req, res) =&gt; {
-    <span style="color:#6272a4">// In here show how to call prod data
-</span><span style="color:#6272a4"></span>  })</code></pre></td></tr></table>
+      
+      <h2 id="requirements">Requirements</h2>
+<p>Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.</p>
+<p>The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way. Some people preferred reading content, some prefer a video, others enjoy listening to audio. This meant we would need to take advantage of cloud hosting using Amazon AWS S3.</p>
+<h2 id="trainer-application">Trainer Application</h2>
+<p>Trainers register for an administrator account on the Grow2 landing page. This page is also used to login for students who are invited by the trainer.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/landing-page.png'/>
+</div>
+<h3 id="trainer-dashboard">Trainer dashboard</h3>
+<p>When the trainer is logged in they can now create courses, see their list of students and their assigned courses, as well as any pending invitations to students.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/admin-students.png'/>
+</div>
+<h3 id="student-profiles">Student profiles</h3>
+<p>Student profiles allows the trainer to see any activity the student is displaying, the progress of their assigned courses. The trainer may also edit their associated businesses.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/admin-student.png'/>
+</div>
+<h3 id="create-courses">Create courses</h3>
+<p>Trainers can create courses which are composed of Units which are further broken down into Learning Cards. These courses can be instantly distributed to students.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/admin-course.png'/>
+</div>
+<h3 id="publish-content">Publish content</h3>
+<p>Trainers can produce content for the Learning Cards using the Wizard. This Wizard allows the trainer to add text, images, audio, video and a quiz.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/admin-card.png'/>
+</div>
+<h3 id="create-a-quiz">Create a quiz</h3>
+<p>The quiz feature allows the trainer to test the knowledge of the student on each card. If no quiz is added then the student can progress immediately. A preview of the quiz is available on the right hand side as the questions and answers are being edited.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/grow2/admin-quiz.png'/>
+</div>
+<h2 id="student-application">Student application</h2>
+<p>The trainer will then invite students to the Grow2 platform. These students will be asked to complete a registration form and set their password.</p>
+<p>Once their account is created they will be presented with any assigned courses. From here they can continue into a course and progress through the units.</p>
+<p>All progress is reported back to the Trainer in real time and added to their Student Profile.</p>
+<div class="phones">
+<div class="phones__wrap">
+<div class="phones__list">
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/grow2/student-courses.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/grow2/student-course.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/grow2/student-card.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
 </div>
 </div>
-<p>Now with that route defined, we can go to our browser and type <code>localhost:8080/profile/1</code> with <code>1</code> being the user id for the profile we want to look at. This will then call our server, get the data we want and populate our components. As long as we have styled our design how we want then we are now seeing exactly what you would see in production!</p>
+</div>
+<div class="well">
+  <div>
+    <h3 class="well__title pressed">Like what you se?</h3>
+    <p>Get in touch to see how DCUBED can help bring innovation to your business.</p>
+  </div><a class="btn" href='#contact'>Get in touch</a>
+</div>
 
     </article>
     <aside id="meta">
@@ -126,14 +230,9 @@
         
       </div><div class="post-pagination">
   
-  <a class="previous" href="https://dcubed.com.au/blog/simple-ab-test-in-prototypes/">
-    <i class="fas fa-chevron-left" style="margin-right: 0.75rem"></i>
-    Simple way to A/B test your Vue prototypes 
-  </a>
   
-  
-  <a class="next" href="https://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/">
-    Create smoother animations with animation-fill-mode <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
+  <a class="next" href="https://dcubed.com.au/work/finx-case-study/">
+    Finance X - Case Study <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
   </a>
   
 </div>

@@ -9,7 +9,7 @@
   <div class="container">
     <article>
       <header>
-        <h1>{{.Title}}</h1>
+        <h1 class="double">{{.Title}}</h1>
       </header>
       {{ if .Description }}
       <p class="h3 double">{{ .Description | markdownify }}</p>
@@ -19,15 +19,9 @@
         <img src="{{ .Params.heroLargeUrl }}" alt="" />
       </div>
       {{ end }}
+      {{- partial "contact-form.html" . -}}
       {{.Content}}
-
-      <div class="deeds-subscribe">
-        <h3 class="text-center">Subscribe to the newsletter</h3>
-        <p>If you're not interested in applying but keen to follow along and hopefully donate then please subscribe below.</p>
-        {{- partial "newsletter.html" . -}}
-      </div>
     </article>
   </div>
 </main>
-{{- partial "recent-posts.html" . -}}
 {{ end }}

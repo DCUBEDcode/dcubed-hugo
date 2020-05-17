@@ -1,63 +1,11 @@
 <footer class="footer" id="contact">
   <div class="container container--small">
-    <h1 class="section-title light-title">Get in touch!</h1>
-    <p class="double">Whether you need to create a new product from scratch, drastically improve a product or give your team an innovative kick, DCUBED has you covered.</p>
-    <form method="POST" action="https://formspree.io/mbjankzq" class="form" id="form">
-      <div class="form__content">
-        <div class="form__group">
-          <input type="text" id="first-name" name="firstName" placeholder="First name*" class="form__input"
-                                                                                        required>
-        </div>
-        <div class="form__group">
-          <input type="email" name="email" placeholder="Email address" class="form__input"
-                                                                      required>
-        </div>
-        <div class="form__group desktop-only">
-          <input type="text" name="company" placeholder="Company name" class="form__input">
-        </div>
-        <div class="form__group desktop-only">
-          <input type="text" name="title" placeholder="What is the title in your company?" class="form__input">
-        </div>
-        <div class="form__group mobile-double">
-          <input type="tel" name="phone" placeholder="Phone number*"  class="form__input"
-                                                                      required>
-        </div>
-        <div class="form__group double desktop-only">
-          <input type="text" name="refer" placeholder="How did you hear about us?" class="form__input">
-        </div>
-        <h3>How can DCUBED help?</h3>
-        <div class="form__group double">
-          <label for="ux" class="form__checkbox">
-            <input type="checkbox" id="ux" name="serviceUx">
-            <span>I'm looking for top notch UI/UX design for an idea.</span>
-          </label>
-          <label for="dev" class="form__checkbox">
-            <input type="checkbox" id="dev" name="serviceDev">
-            <span>I need classy engineers to build something I have already designed.</span>
-          </label>
-          <label for="all" class="form__checkbox">
-            <input type="checkbox" id="all" name="serviceAll">
-            <span>I would like an entire product built from the ground up.</span>
-          </label>
-          <label for="sprint" class="form__checkbox">
-            <input type="checkbox" id="sprint" name="serviceSprint">
-            <span>I'm interested in Design Sprint training/facilitation</span>
-          </label>
-        </div>
-        <button class="btn btn--large btn--block form__button" id="form-submit">Submit Form</button>
-      </div>
-      <div class="form__success">
-        <h2>Thanks for your enquiry</h2>
-        <p>Someone from our team will reach out as soon possible. We look forward to speaking with you.</p>
-        <p>- Jason from DCUBED</p>
-      </div>
-      <div class="form__error">
-        <h2>Something wen't wrong</h2>
-        <p>Not sure what happened here. You can try again or feel free to
-        email us below.</p>
-        <p>- Jason from DCUBED</p>
-      </div>
-    </form>
+    {{ if eq (relURL .URL) ("/contact/" | safeHTML) }}
+    {{ else }}
+      <h1 class="section-title light-title">Get in touch!</h1>
+      <p class="double">Whether you need to create a new product from scratch, drastically improve a product or give your team an innovative kick, DCUBED has you covered.</p>
+      {{- partial "contact-form.html" . -}}
+    {{ end }}
   </div>
 </footer>
 <script src="/js/page.js"></script>

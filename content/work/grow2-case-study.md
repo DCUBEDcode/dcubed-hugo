@@ -8,10 +8,6 @@ heroLargeUrl: '/post-header-grow2-large@2x.png'
 heroClass: grow2
 siteUrl: https://www.grow2.com.au
 draft: false
-type: casestudy
-layout: single
-categories:
-  - casestudy
 deliverables:
   - text: Brand
     icon: fingerprint

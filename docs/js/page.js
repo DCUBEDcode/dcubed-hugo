@@ -113,7 +113,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
     icon.addEventListener('click', handleIconClick)
   })
 
-  closeNav.addEventListener('click', handleCloseNavClick)
+  if (closeNav) {
+    closeNav.addEventListener('click', handleCloseNavClick)
+  }
 
   if (cta) {
     cta.addEventListener('click', handleCtaClick)

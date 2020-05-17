@@ -1,13 +1,18 @@
 <nav class="header__nav header__nav--inline" id="header-nav">
-  <a class="header__nav-icon header__nav-icon--open toggle-nav">
+  <div class="header__nav-icon header__nav-icon--open toggle-nav">
     <i class="fas fa-bars"></i>
-  </a>
-  <a class="header__nav-icon header__nav-icon--close toggle-nav">
+  </div>
+  <div class="header__nav-icon header__nav-icon--close toggle-nav">
     <i class="fas fa-times"></i>
-  </a>
+  </div>
+  <a href="/work" class="header__nav-link">Our Work</a>
   <a href="/design" class="header__nav-link">Design</a>
   <a href="/development" class="header__nav-link">Development</a>
-  <a href="/blog" class="header__nav-link mobile-double">Blog</a>
-  <a href="#contact" class="btn btn--secondary btn--light close-nav">Get in touch</a>
+  <a href="/blog" class="header__nav-link">Blog</a>
+  {{ if eq (relURL .URL) ("/" | safeHTML) }}
+    <a href="/contact" class="header__nav-link mobile-double">Contact Us</a>
+  {{ else }}
+    <a href="/contact" class="btn btn--secondary btn--light">Contact Us</a>
+  {{ end }}
 </nav>
 

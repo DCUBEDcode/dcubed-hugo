@@ -33,28 +33,6 @@ The key here is the connection the content being used to compose a designers moc
     </item>
     
     <item>
-      <title>Finance X - Case Study</title>
-      <link>https://dcubed.com.au/blog/finx-case-study/</link>
-      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
-      
-      <guid>https://dcubed.com.au/blog/finx-case-study/</guid>
-      <description>Requirements FinX is a finance solutions company that offers financial services to customers looking to purchase vehicles, equipment, marine, caravans and other commercial goods.
-At the time FinX did not have a website to direct potential customers to and therefor needed one built, asap.
-The primary goal of this new website will be to generate leads as well as provide an online presence.
-Responsive website The new landing page is a ‘responsive’ website.</description>
-    </item>
-    
-    <item>
-      <title>Grow2 - Case Study</title>
-      <link>https://dcubed.com.au/blog/grow2-case-study/</link>
-      <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>
-      
-      <guid>https://dcubed.com.au/blog/grow2-case-study/</guid>
-      <description>Requirements Grow2 required a suite of applications to run on desktop and mobile for both adminstrators (content creators) and the people receiving the material.
-The point was made early on by the team at Grow2 that everybody had to have the ability to learn in their preferred way. Some people preferred reading content, some prefer a video, others enjoy listening to audio. This meant we would need to take advantage of cloud hosting using Amazon AWS S3.</description>
-    </item>
-    
-    <item>
       <title>Simple way to A/B test your Vue prototypes</title>
       <link>https://dcubed.com.au/blog/simple-ab-test-in-prototypes/</link>
       <pubDate>Mon, 04 May 2020 16:30:14 +1000</pubDate>

@@ -6,13 +6,13 @@
     </title>
   <link
     href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:300,700,900|Raleway:800&amp;display=fallback" rel="stylesheet">
-  <meta property="og:url"                content="https://dcubed.com.au/blog/prototyping-with-real-data/" />
-  <meta property="og:title"              content="Creating a prototype app using production data" />
-  <meta property="og:description"        content="Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart." />
+  <meta property="og:url"                content="https://dcubed.com.au/work/finx-case-study/" />
+  <meta property="og:title"              content="Finance X - Case Study" />
+  <meta property="og:description"        content="Finance X is a new finance company based in Brisbane had all their merch labelled with their domain but no website! This popup site was created in a weekend to help them start taking traffic and capturing finance enquiries." />
   
-    <meta property="og:image"              content="https://dcubed.com.au/dcubed-og.jpg" />
+    <meta property="og:image"              content="https://dcubed.com.au/post-header-finx-large.png" />
   
-  <meta name="description" content="Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.">
+  <meta name="description" content="Finance X is a new finance company based in Brisbane had all their merch labelled with their domain but no website! This popup site was created in a weekend to help them start taking traffic and capturing finance enquiries.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link rel="shortcut icon" href="/icon.svg">
   <link rel="stylesheet" href="/css/style.css">
@@ -72,52 +72,132 @@
 
 <div class="post-wrap">
   <div class="container">
-    <h1 id="title" class="post-title">Creating a prototype app using production data</h1>
+    <header class="post-header">
+      <h1 id="title" class="post-title">Finance X - Case Study</h1>
+      <a href="https://www.fin-x.com.au" class="btn" target="_blank">Visit Site</a>
+    </header>
     <aside class="post-meta double">
       <p id="date" class="flat">Published Mon May 4, 2020 </p>
       <span class="desktop-only">| </span>
-      <p id="wordcount" class="flat"> 3 minute read</p>
+      <p id="wordcount" class="flat"> 2 minute read</p>
     </aside>
     
-      <p class="h3 double">Designers often live in &#34;best case scenario&#34; land, adding the best images or copy to their mocks. This makes for pretty picture but when engineers start putting things together it can quickly fall apart.</p>
-    
-    
-      <div class="double">
-        <img src="/post-header-proddata-large@2x.png" alt="" />
+    <div class="double post-hero post-hero--finx">
+        <div class="post-hero__content">
+          <img src="/post-header-finx-large.png" alt="" />
+        </div>
       </div>
     
+    
+      <p class="h3 double">Finance X is a new finance company based in Brisbane had all their merch labelled with their domain but no website! This popup site was created in a weekend to help them start taking traffic and capturing finance enquiries.</p>
+    
+    
+      <h2 class="double">Deliverables</h2>
+      <ul class="deliverables">
+        
+          <li><i class="fal fa-fingerprint"></i>Brand</li>
+        
+          <li><i class="fal fa-tape"></i>UI Design</li>
+        
+          <li><i class="fal fa-phone-laptop"></i>Responsive Website</li>
+        
+          <li><i class="fal fa-analytics"></i>Analytics</li>
+        
+      </ul>
+    
     <article id="content">
-      <h2 id="what-is-production-data">What is production data?</h2>
-<p>Production data is data that is either a clone or the direct source of data that is used to power your exisiting apps. Typically your apps will receive data from &ldquo;endpoints&rdquo; which have been designed to return particular data. For example, your currenty app  may call <code>yourapp.com/api/countries</code> to get a list of <code>Countries</code>.</p>
-<p>The key here is the connection the content being used to compose a designers mock and what we will end up showing to our users. Maintaining this connection means that what we deliver is consistent with what was proposed and user tested against.</p>
-<h3 id="benefits-of-using-production-data">Benefits of using production data</h3>
-<ol>
-<li>Designers are exposed to back end systems, if only endpoints of an API. They are aware of the limitations, which are important to designing realistic pieces given time constraints.</li>
-<li>Content gaps are exposed early by user testing.</li>
-<li>The transition from prototype code to production code is minimal meaning release time is considerably less.</li>
-</ol>
-<h2 id="two-things-you-need-to-make-this-happen">Two things you need to make this happen</h2>
-<p>Everybody will have a different production setup and I hope this article is more of a conversation starter than a tutorial. I will go through a high level overview of what a setup could look like.</p>
-<h3 id="1-modern-front-end-library-reactvue">1. Modern front end library (React/Vue)</h3>
-<p>If your production environment uses a modern front end library such as React/Vue, then use that in your prototyping app. If you are not blessed with a modern production front end then I would suggest switching to a modern library for your prototype app. You will be able to build things so much faster by using props and all the powerful templating patterns.</p>
-<p>The only down side is you won&rsquo;t have the ability to easily move code from prototype to production.</p>
-<p><em>Bonus points for having your organisations design system written in your favourite front end frame work</em></p>
-<h3 id="2-node-server">2. Node Server</h3>
-<p>Node is fast enough, easy enough, reliable enough to recommend using to create your prototyping app. You will use this app to compose your components into views and populate them with data from your production endpoints. In this app, you will define routes which map back to production APIs to give back the data your composed views need.</p>
-<p>The routes you define will be determined by your design. Say for example you work for a company that makes a Fantasy Football app and you want to display a uses profile. The engineers would most likely already have an endpoint that returns this kind of data, therefore you would create a route in your Node app to call this endpoint and return its data. Something like this:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  app.<span style="color:#50fa7b">get</span>(&#39;<span style="color:#ff79c6">/</span>profile<span style="color:#ff79c6">/</span>:user&#39;, (req, res) =&gt; {
-    <span style="color:#6272a4">// In here show how to call prod data
-</span><span style="color:#6272a4"></span>  })</code></pre></td></tr></table>
+      
+      <h2 id="requirements">Requirements</h2>
+<p>FinX is a finance solutions company that offers financial services to customers looking to purchase vehicles, equipment, marine, caravans and other commercial goods.</p>
+<p>At the time FinX did not have a website to direct potential customers to and therefor needed one built, asap.</p>
+<p>The primary goal of this new website will be to generate leads as well as provide an online presence.</p>
+<h2 id="responsive-website">Responsive website</h2>
+<p>The new landing page is a ‘responsive’ website. This means that the user interface responds to the device size it is being viewed on and fits to screen accordingly.</p>
+<p>The design of this website will take a ‘single page’ approach. This is exactly the same as any other website, it just means that instead of creating multiple pages that are bare with content on them, you design the landing page to include all the content for the website and be supported by a navigation system that allows the user to jump to the relevant sections. This creates a more engaging experience by allowing your content to be discovered by scrolls rather than clicks to subsequent pages.</p>
+<h2 id="loan-repayment-calculator">Loan Repayment Calculator</h2>
+<p>This primary features of the new website will be a loan calculator tool that allows the customer to enter their desired loan amount, configure a loan duration and then preview the repayments. From there they will be able to send an enquiry through to the FinX team who will receive their contact details along with the selected loan terms.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/finx/finx-desktop.png'/>
+</div>
+<h2 id="enquiry-form">Enquiry form</h2>
+<p>The second part to the loan calculator is the enquiry form. Once the desired loan terms are entered in the calculator, the user will be asked to enter contact information including name, email address, phone number as well as employment status.</p>
+<div class="browser-mockup">
+  <img src='/casestudy/finx/finx-enquiry.png'/>
+</div>
+<h2 id="mobile-workflow">Mobile workflow</h2>
+<p>This design was created from a mobile first approach, this is evident when you see the animations between the form steps.</p>
+<div class="phones">
+<div class="phones__wrap">
+<div class="phones__list">
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/finx/finx-mobile.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/finx/finx-mobile-configure.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
+  <div>
+<div class="iphone">
+  <div class="iphone-top">
+    <span class="camera"></span>
+    <span class="sensor"></span>
+    <span class="speaker"></span>
+  </div>
+  <div class="top-bar"></div>
+  <div class="iphone-screen" style='background-image: url(/casestudy/finx/finx-mobile-enquiry.png)'>
+  </div>
+  <div class="buttons">
+    <span class="on-off"></span>
+    <span class="sleep"></span>
+    <span class="up"></span>
+    <span class="down"></span>
+  </div>
+  <div class="bottom-bar"></div>
+  <div class="iphone-bottom">
+    <span></span>
+  </div>
+</div>
+  </div>
 </div>
 </div>
-<p>Now with that route defined, we can go to our browser and type <code>localhost:8080/profile/1</code> with <code>1</code> being the user id for the profile we want to look at. This will then call our server, get the data we want and populate our components. As long as we have styled our design how we want then we are now seeing exactly what you would see in production!</p>
+</div>
 
     </article>
     <aside id="meta">
@@ -126,15 +206,11 @@
         
       </div><div class="post-pagination">
   
-  <a class="previous" href="https://dcubed.com.au/blog/simple-ab-test-in-prototypes/">
+  <a class="previous" href="https://dcubed.com.au/work/grow2-case-study/">
     <i class="fas fa-chevron-left" style="margin-right: 0.75rem"></i>
-    Simple way to A/B test your Vue prototypes 
+    Grow2 - Case Study 
   </a>
   
-  
-  <a class="next" href="https://dcubed.com.au/blog/smoother-css-animations-with-fill-mode/">
-    Create smoother animations with animation-fill-mode <i class="fas fa-chevron-right" style="margin-left: 0.75rem"></i>
-  </a>
   
 </div>
 </aside>

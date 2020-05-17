@@ -8,11 +8,7 @@ heroSmallUrl: '/post-header-finx-small.png'
 ogImage: 'post-header-finx-large.png'
 heroLargeUrl: '/post-header-finx-large.png'
 heroClass: finx
-type: casestudy
-layout: single
 siteUrl: https://www.fin-x.com.au
-categories:
-  - casestudy
 deliverables:
   - text: Brand
     icon: fingerprint
