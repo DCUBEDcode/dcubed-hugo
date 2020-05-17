@@ -89,6 +89,84 @@ pre code {
   white-space: pre-wrap;
 }
 
+.btn {
+  display: inline-block;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ff6100;
+  border: 0;
+  color: #fff;
+  border-radius: 1.5rem;
+  height: 44px;
+  line-height: 44px;
+  outline: none;
+  padding: 0 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 375ms ease;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn--secondary {
+  background: none;
+  border: 2px solid #ff6100;
+  color: inherit;
+  line-height: 42px; /* take away borders */
+}
+
+.btn--tab {
+  background: #fff;
+  border: 1px solid #13182f;
+  color: #13182f;
+}
+
+.btn--tab-selected {
+  background: #13182f;
+  color: #fff;
+}
+
+.btn--light {
+  color: #fff;
+}
+
+.btn--large {
+  height: auto;
+  line-height: auto;
+  padding: 0.5rem 3rem;
+  font-size: 1.25rem;
+}
+
+.btn--link {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: #28a0ff;
+  text-shadow: none;
+  font-size: 1em;
+  margin-left: -30px;
+  font-weight: 600;
+}
+
+.btn--link:hover {
+  box-shadow: none;
+  color: #044a82;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-0.25rem);
+}
+
+
 .desktop-only {
   display: none;
 }
@@ -902,83 +980,6 @@ h3,
   top: 4px;
   animation-delay: 700ms;
   animation-name: showCubeFromFront;
-}
-
-.btn {
-  display: inline-block;
-  user-select: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background: #ff6100;
-  border: 0;
-  color: #fff;
-  border-radius: 1.5rem;
-  height: 44px;
-  line-height: 44px;
-  outline: none;
-  padding: 0 2rem;
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 375ms ease;
-  font-weight: 600;
-  text-align: center;
-}
-
-.btn--secondary {
-  background: none;
-  border: 2px solid #ff6100;
-  color: inherit;
-  line-height: 42px; /* take away borders */
-}
-
-.btn--tab {
-  background: #fff;
-  border: 1px solid #13182f;
-  color: #13182f;
-}
-
-.btn--tab-selected {
-  background: #13182f;
-  color: #fff;
-}
-
-.btn--light {
-  color: #fff;
-}
-
-.btn--large {
-  height: auto;
-  line-height: auto;
-  padding: 0.5rem 3rem;
-  font-size: 1.25rem;
-}
-
-.btn--link {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  color: #28a0ff;
-  text-shadow: none;
-  font-size: 1em;
-  margin-left: -30px;
-  font-weight: 600;
-}
-
-.btn--link:hover {
-  box-shadow: none;
-  color: #044a82;
-}
-
-.btn--block {
-  display: block;
-  width: 100%;
-}
-
-.btn:hover {
-  transform: translateY(-0.25rem);
 }
 
 .grow2 {
