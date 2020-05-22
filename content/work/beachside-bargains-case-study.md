@@ -1,7 +1,7 @@
 ---
 title: 'Beachside Bargains Landing Page'
 date: 2020-05-17T22:54:14+10:00
-description: 'Beachside Bargains Ballina are in a unique situation where there are two other stores with the same name just a town away. It was important that they got a website up quick smart, so they could direct potential customers to the right store.'
+description: 'Beachside Bargains Ballina are in a unique situation where there are two other stores with the same name just a town away. Therefore it was important that they got a website up quick smart, so they could direct potential customers to the right store.'
 draft: false
 heroClass: bb
 heroTall: '/case-header-bb@2x.png'
@@ -24,7 +24,7 @@ deliverables:
 
 Beachside Bargains already had a good looking logo to work with that allowed us to seamlessly integrate a beachy vibe with bold and vibrant colours. As you scroll on both mobile and desktop it transitions the sky from a sunny blue horizon into a beautiful orange sunset, while the logo sets in the background. Gorgeous!
 
-The website is clearly a mobile-first design with the call to actions positioned perfectly near those eager thumbs. A mobile-first responsive design is always going to deliver the best results when scaling the design up to larger devices.
+With it's mobile-first design, the call to actions are positioned perfectly near those eager thumbs. A mobile-first responsive design is always going to deliver the best results when scaling the design up to larger devices.
 
 <div class="double"></div>
 
