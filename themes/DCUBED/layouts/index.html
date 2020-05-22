@@ -1,12 +1,12 @@
 {{ define "main" }}
   <div class="casestudys">
     <div class="casestudys__bg">
-      <h1 class="section-title casestudys__title">Featured work</h1>
+      <h1 class="section-title casestudys__title double">Featured work</h1>
       <section class="section casestudys__wrap">
         {{ $casestudy := .Site.Taxonomies.categories.casestudy  }}
         {{ range ($casestudy.Pages) }}
           <div class="casestudy">
-            <div class="casestudy__image" style='background-image: url({{ .Params.heroTall }})'>
+            <div class="casestudy__image" style='background-image: url({{ .Params.heroSmallUrl }})'>
             </div>
             <div class="casestudy__copy">
               <h2>{{ .Title }}</h2>

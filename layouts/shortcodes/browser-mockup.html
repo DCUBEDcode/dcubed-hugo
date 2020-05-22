@@ -1,6 +1,4 @@
 {{/* DEFAULTS */}}
 {{ $src := "" }}
 
-<div class="browser-mockup">
-  <img src='{{ .Get "src" }}'/>
-</div>
+<div class="browser-mockup">{{ if .Get "src" }}<img src='{{ .Get "src" }}'/>{{ end }} {{ if .Get "videoSrc" }}<video autoplay loop><source src='{{ .Get "videoSrc" }}' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'><source src="{{ .Get "videoSrc" }}" type='video/webm; codecs="vp8, vorbis"'></video>{{ end }}</div>

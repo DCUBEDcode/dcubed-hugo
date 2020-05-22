@@ -5,14 +5,14 @@
 <div class="post-wrap">
   <div class="container">
     <header class="post-header">
-      <h1 id="title" class="post-title">{{ .Title }}</h1>
-      <a href="{{ .Params.siteUrl }}" class="btn" target="_blank">Visit Site</a>
+      <div class="post-header__text">
+        <h1 id="title" class="post-title">{{ .Title }}</h1>
+        <aside class="post-meta">
+          <p id="date">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
+        </aside>
+      </div>
+      <a href="{{ .Params.siteUrl }}" class="btn btn--secondary post-header__btn" target="_blank">Visit Site</a>
     </header>
-    <aside class="post-meta double">
-      <p id="date" class="flat">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
-      <span class="desktop-only">| </span>
-      <p id="wordcount" class="flat"> {{ .ReadingTime }} minute read</p>
-    </aside>
     {{ if .Params.heroLargeUrl }}
     <div class="double post-hero post-hero--{{ .Params.heroClass }}">
         <div class="post-hero__content">
@@ -25,8 +25,10 @@
     {{ end }}
     {{ if .Params.deliverables }}
       <h2 class="double">Deliverables</h2>
-      <ul class="deliverables">
-        {{ range .Params.deliverables }}
+      {{ $list := (.Params.deliverables) }}
+      {{ $len := (len $list) }}
+      <ul class="deliverables deliverables--{{ $len }}">
+        {{ range $list }}
           <li><i class="fal fa-{{ .icon }}"></i>{{ .text }}</li>
         {{ end }}
       </ul>
@@ -54,9 +56,7 @@
         </ul>
         {{ end }}
       </div>
-      {{- partial "pagination.html" . -}}
     </aside>
   </div>
 </div>
-{{- partial "recent-posts.html" . -}}
 {{ end }}

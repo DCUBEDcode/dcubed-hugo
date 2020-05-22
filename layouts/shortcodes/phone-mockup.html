@@ -8,8 +8,8 @@
     <span class="speaker"></span>
   </div>
   <div class="top-bar"></div>
-  <div class="iphone-screen" style='background-image: url({{ .Get "src" }})'>
-  </div>
+  {{ if .Get "src" }}<div class="iphone-screen" style='background-image: url({{ .Get "src" }})'></div>{{ end }}
+  {{ if .Get "videoSrc" }}<div class="iphone-screen"><video id="landing-video" autoplay loop><source src='{{ .Get "videoSrc" }}' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'><source src="{{ .Get "videoSrc" }}" type='video/webm; codecs="vp8, vorbis"'></video></div>{{ end }}
   <div class="buttons">
     <span class="on-off"></span>
     <span class="sleep"></span>
