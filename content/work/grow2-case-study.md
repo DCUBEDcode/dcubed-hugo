@@ -37,31 +37,31 @@ Trainers register for an administrator account on the Grow2 landing page. This p
 
 When the trainer is logged in they can now create courses, see their list of students and their assigned courses, as well as any pending invitations to students.
 
-{{% browser-mockup src="/casestudy/grow2/admin-students.png" %}}
+{{% browser-mockup src="/casestudy/grow2/admin-students.jpg" %}}
 
 ### Student profiles
 
 Student profiles allows the trainer to see any activity the student is displaying, the progress of their assigned courses. The trainer may also edit their associated businesses.
 
-{{% browser-mockup src="/casestudy/grow2/admin-student.png" %}}
+{{% browser-mockup src="/casestudy/grow2/admin-student.jpg" %}}
 
 ### Create courses
 
 Trainers can create courses which are composed of Units which are further broken down into Learning Cards. These courses can be instantly distributed to students.
 
-{{% browser-mockup src="/casestudy/grow2/admin-course.png" %}}
+{{% browser-mockup src="/casestudy/grow2/admin-course.jpg" %}}
 
 ### Publish content
 
 Trainers can produce content for the Learning Cards using the Wizard. This Wizard allows the trainer to add text, images, audio, video and a quiz.
 
-{{% browser-mockup src="/casestudy/grow2/admin-card.png" %}}
+{{% browser-mockup src="/casestudy/grow2/admin-card.jpg" %}}
 
 ### Create a quiz
 
 The quiz feature allows the trainer to test the knowledge of the student on each card. If no quiz is added then the student can progress immediately. A preview of the quiz is available on the right hand side as the questions and answers are being edited.
 
-{{% browser-mockup src="/casestudy/grow2/admin-quiz.png" %}}
+{{% browser-mockup src="/casestudy/grow2/admin-cardscrolled.jpg" %}}
 
 ## Student application
 
@@ -75,13 +75,19 @@ All progress is reported back to the Trainer in real time and added to their Stu
 <div class="phones__wrap">
 <div class="phones__list">
   <div>
-    {{% phone-mockup src="/casestudy/grow2/student-courses.png" %}}
+    {{% phone-mockup src="/casestudy/grow2/student-courses.jpg" %}}
   </div>
   <div>
-    {{% phone-mockup src="/casestudy/grow2/student-course.png" %}}
+    {{% phone-mockup src="/casestudy/grow2/student-course.jpg" %}}
   </div>
   <div>
-    {{% phone-mockup src="/casestudy/grow2/student-card.png" %}}
+    {{% phone-mockup src="/casestudy/grow2/student-card.jpg" %}}
+  </div>
+  <div>
+    {{% phone-mockup src="/casestudy/grow2/student-quiz.jpg" %}}
+  </div>
+  <div>
+    {{% phone-mockup src="/casestudy/grow2/student-results.jpg" %}}
   </div>
 </div>
 </div>
