@@ -2,7 +2,7 @@
 title: 'Grow2 Web Application'
 date: 2020-05-04T16:30:14+10:00
 description: 'Grow2 is an education startup based in Brisbane, Australia who have created an information platform for sporting clubs. Their priority is to make sure everyone can receive training in all formats - text, imagery, audio or video.'
-heroTall: '/case-header-grow2@2x.png'
+heroTall: '/case-header-grow2@2x.jpg'
 heroSmallUrl: '/post-header-grow2-small.png'
 heroLargeUrl: '/post-header-grow2-large@2x.png'
 heroClass: grow2

@@ -4,7 +4,7 @@ date: 2020-05-17T22:54:14+10:00
 description: 'Beachside Bargains Ballina are in a unique situation where there are two other stores with the same name just a town away. Therefore it was important that they got a website up quick smart, so they could direct potential customers to the right store.'
 draft: false
 heroClass: bb
-heroTall: '/case-header-bb@2x.png'
+heroTall: '/case-header-bb@2x.jpg'
 heroSmallUrl: '/post-header-bb-small@2x.png'
 ogImage: 'post-header-bb-large.png'
 heroLargeUrl: '/post-header-bb-large@2x.png'

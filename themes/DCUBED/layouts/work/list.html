@@ -18,7 +18,9 @@
         <!-- Ranges through content/posts/*.md -->
         {{ range .Pages }}
           <li class="casestudy casestudy--flag">
-            <div class="casestudy__image" style='background-image: url({{ .Params.heroTall }})'>
+            <div class="casestudy__image desktop-only" style='background-image: url({{ .Params.heroTall }})'>
+            </div>
+            <div class="casestudy__image mobile-only" style='background-image: url({{ .Params.heroSmallUrl }})'>
             </div>
             <div class="casestudy__copy">
               <h2>{{ .Title }}</h2>

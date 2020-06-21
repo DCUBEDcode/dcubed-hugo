@@ -377,7 +377,7 @@ pre code {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .container--small {
@@ -734,7 +734,7 @@ h3,
 }
 
 .casestudys {
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .casestudys__bg {
@@ -745,6 +745,10 @@ h3,
 .casestudy {
   display: flex;
   flex-direction: column;
+}
+
+.casestudy + .casestudy {
+  margin-top: 2rem;
 }
 
 .casestudy__review {
@@ -764,7 +768,7 @@ h3,
   background-position: center;
   position: relative;
   margin-bottom: 2rem;
-  padding-bottom: 56.25%;
+  padding-bottom: 68%;
 }
 
 .casestudy__btn {
@@ -1536,10 +1540,6 @@ h3,
     margin-top: 1rem;
   }
 
-  .casestudy + .casestudy {
-    margin-top: 4rem;
-  }
-
   .mobile-double {
     margin-bottom: 2rem !important;
   }
@@ -1570,6 +1570,10 @@ h3,
 }
 
 @media(min-width: 768px) {
+
+  .container {
+    padding: 0 1rem;
+  }
 
   .our-work {
     display: grid;
@@ -1760,6 +1764,10 @@ h3,
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
     grid-row-gap: 4rem;
+  }
+
+  .casestudys__wrap .casestudy {
+    margin-top: 0;
   }
 
   .casestudys h1,

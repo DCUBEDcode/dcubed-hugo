@@ -11,7 +11,9 @@
           <p id="date">Published {{ .Date.Format "Mon Jan 2, 2006" }} </p>
         </aside>
       </div>
-      <a href="{{ .Params.siteUrl }}" class="btn btn--secondary post-header__btn" target="_blank">Visit Site</a>
+      {{ if .Params.siteUrl }}
+        <a href="{{ .Params.siteUrl }}" class="btn btn--secondary post-header__btn" target="_blank">Visit Site</a>
+      {{ end }}
     </header>
     {{ if .Params.heroLargeUrl }}
     <div class="double post-hero post-hero--{{ .Params.heroClass }}">

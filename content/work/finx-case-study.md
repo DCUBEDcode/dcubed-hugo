@@ -3,7 +3,7 @@ title: 'Finance X Sales Page'
 date: 2020-05-04T16:30:14+10:00
 description: 'Finance X is a new finance company based in Brisbane had all their merch labelled with their domain but no website! This popup site was created in a weekend to help them start taking traffic and capturing finance enquiries.'
 draft: false
-heroTall: '/case-header-finx.png'
+heroTall: '/case-header-finx@2x.jpg'
 heroSmallUrl: '/post-header-finx-small.png'
 ogImage: 'post-header-finx-large.png'
 heroLargeUrl: '/post-header-finx-large.png'
